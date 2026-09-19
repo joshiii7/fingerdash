@@ -1,0 +1,70 @@
+[
+  {
+    "id": "js-01",
+    "code": "const numbers = [1, 2, 3, 4, 5];\nconst doubled = numbers.map((n) => n * 2);\nconsole.log(doubled);"
+  },
+  {
+    "id": "js-02",
+    "code": "function greet(name) {\n  return `Hello, ${name}!`;\n}\nconsole.log(greet('world'));"
+  },
+  {
+    "id": "js-03",
+    "code": "let total = 0;\nfor (let i = 1; i <= 10; i++) {\n  total += i;\n}\nconsole.log(total);"
+  },
+  {
+    "id": "js-04",
+    "code": "class Counter {\n  constructor() {\n    this.count = 0;\n  }\n  increment() {\n    this.count += 1;\n  }\n}"
+  },
+  {
+    "id": "js-05",
+    "code": "const user = { name: 'Ana', age: 28 };\nconst { name, age } = user;\nconsole.log(`${name} is ${age}`);"
+  },
+  {
+    "id": "js-06",
+    "code": "async function loadData(url) {\n  const response = await fetch(url);\n  if (!response.ok) {\n    throw new Error('Request failed');\n  }\n  return response.json();\n}"
+  },
+  {
+    "id": "js-07",
+    "code": "const isEven = (n) => n % 2 === 0;\nconst evens = [1, 2, 3, 4, 5, 6].filter(isEven);\nconsole.log(evens);"
+  },
+  {
+    "id": "js-08",
+    "code": "const words = ['apple', 'banana', 'cherry'];\nfor (const word of words) {\n  console.log(word.toUpperCase());\n}"
+  },
+  {
+    "id": "js-09",
+    "code": "function sum(...values) {\n  return values.reduce((a, b) => a + b, 0);\n}\nconsole.log(sum(1, 2, 3));"
+  },
+  {
+    "id": "js-10",
+    "code": "const button = document.querySelector('#save');\nbutton.addEventListener('click', () => {\n  console.log('Saved!');\n});"
+  },
+  {
+    "id": "js-11",
+    "code": "let count = 3;\nwhile (count > 0) {\n  console.log(count);\n  count--;\n}"
+  },
+  {
+    "id": "js-12",
+    "code": "const map = new Map();\nmap.set('a', 1);\nmap.set('b', 2);\nconsole.log(map.get('a') || 0);"
+  },
+  {
+    "id": "js-13",
+    "code": "try {\n  const data = JSON.parse('{\"ok\": true}');\n  console.log(data.ok);\n} catch (error) {\n  console.error(error);\n}"
+  },
+  {
+    "id": "js-14",
+    "code": "const person = {\n  name: 'Sam',\n  greet() {\n    return 'Hi, ' + this.name;\n  },\n};"
+  },
+  {
+    "id": "js-15",
+    "code": "function factorial(n) {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}"
+  },
+  {
+    "id": "js-16",
+    "code": "const scores = [88, 92, 79];\nconst max = Math.max(...scores);\nconst label = max > 90 && max < 100 ? 'great' : 'good';\nconsole.log(label);"
+  },
+  {
+    "id": "js-17",
+    "code": "// Split a Windows path into its parts\nconst path = 'C:\\\\Users\\\\demo';\nconst parts = path.split('\\\\');\nconsole.log(parts.length / 2);"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cs-01",
+    "code": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine(\"Hello, world!\");\n    }\n}"
+  },
+  {
+    "id": "cs-02",
+    "code": "int total = 0;\nfor (int i = 1; i <= 10; i++)\n{\n    total += i;\n}\nConsole.WriteLine(total);"
+  },
+  {
+    "id": "cs-03",
+    "code": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar doubled = numbers.Select(n => n * 2).ToList();\nConsole.WriteLine(string.Join(\", \", doubled));"
+  },
+  {
+    "id": "cs-04",
+    "code": "public class Counter\n{\n    private int _count;\n\n    public void Increment()\n    {\n        _count++;\n    }\n}"
+  },
+  {
+    "id": "cs-05",
+    "code": "string name = \"Ana\";\nint age = 28;\nConsole.WriteLine($\"{name} is {age} years old\");"
+  },
+  {
+    "id": "cs-06",
+    "code": "static bool IsEven(int n)\n{\n    return n % 2 == 0;\n}"
+  },
+  {
+    "id": "cs-07",
+    "code": "static int Factorial(int n)\n{\n    if (n <= 1)\n    {\n        return 1;\n    }\n    return n * Factorial(n - 1);\n}"
+  },
+  {
+    "id": "cs-08",
+    "code": "var ages = new Dictionary<string, int>\n{\n    [\"Ana\"] = 28,\n    [\"Ben\"] = 31,\n};\nConsole.WriteLine(ages[\"Ana\"]);"
+  },
+  {
+    "id": "cs-09",
+    "code": "try\n{\n    int value = int.Parse(\"42\");\n    Console.WriteLine(value);\n}\ncatch (FormatException)\n{\n    Console.WriteLine(\"not a number\");\n}"
+  },
+  {
+    "id": "cs-10",
+    "code": "int count = 3;\nwhile (count > 0)\n{\n    Console.WriteLine(count);\n    count--;\n}"
+  },
+  {
+    "id": "cs-11",
+    "code": "public record Point(int X, int Y);\n\nvar origin = new Point(0, 0);\nConsole.WriteLine(origin);"
+  },
+  {
+    "id": "cs-12",
+    "code": "foreach (var word in new[] { \"apple\", \"banana\" })\n{\n    Console.WriteLine(word.ToUpper());\n}"
+  },
+  {
+    "id": "cs-13",
+    "code": "// Return the larger of two numbers\nstatic int Max(int a, int b) => a > b ? a : b;\n\nConsole.WriteLine(Max(3, 7));"
+  },
+  {
+    "id": "cs-14",
+    "code": "public interface IShape\n{\n    double Area();\n}"
+  },
+  {
+    "id": "cs-15",
+    "code": "string path = @\"C:\\Users\\demo\";\nif (path != null && path.Length > 0)\n{\n    Console.WriteLine(path);\n}"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "java-01",
+    "code": "public class Hello {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, world!\");\n    }\n}"
+  },
+  {
+    "id": "java-02",
+    "code": "int total = 0;\nfor (int i = 1; i <= 10; i++) {\n    total += i;\n}\nSystem.out.println(total);"
+  },
+  {
+    "id": "java-03",
+    "code": "public class Counter {\n    private int count = 0;\n\n    public void increment() {\n        count++;\n    }\n}"
+  },
+  {
+    "id": "java-04",
+    "code": "String[] names = {\"Ana\", \"Ben\", \"Cara\"};\nfor (String name : names) {\n    System.out.println(name.toUpperCase());\n}"
+  },
+  {
+    "id": "java-05",
+    "code": "public static boolean isEven(int n) {\n    return n % 2 == 0;\n}"
+  },
+  {
+    "id": "java-06",
+    "code": "List<Integer> numbers = new ArrayList<>();\nnumbers.add(1);\nnumbers.add(2);\nnumbers.add(3);\nSystem.out.println(numbers.size());"
+  },
+  {
+    "id": "java-07",
+    "code": "public static int factorial(int n) {\n    if (n <= 1) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}"
+  },
+  {
+    "id": "java-08",
+    "code": "Map<String, Integer> ages = new HashMap<>();\nages.put(\"Ana\", 28);\nages.put(\"Ben\", 31);\nSystem.out.println(ages.get(\"Ana\"));"
+  },
+  {
+    "id": "java-09",
+    "code": "try {\n    int value = Integer.parseInt(\"42\");\n    System.out.println(value);\n} catch (NumberFormatException e) {\n    System.out.println(\"not a number\");\n}"
+  },
+  {
+    "id": "java-10",
+    "code": "int count = 3;\nwhile (count > 0) {\n    System.out.println(count);\n    count--;\n}"
+  },
+  {
+    "id": "java-11",
+    "code": "public class Point {\n    private final int x;\n    private final int y;\n\n    public Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n}"
+  },
+  {
+    "id": "java-12",
+    "code": "// Return the larger of two numbers\nstatic int max(int a, int b) {\n    return a > b ? a : b;\n}"
+  },
+  {
+    "id": "java-13",
+    "code": "StringBuilder builder = new StringBuilder();\nbuilder.append(\"Hello\");\nbuilder.append(\", \");\nbuilder.append(\"world\");\nSystem.out.println(builder);"
+  },
+  {
+    "id": "java-14",
+    "code": "interface Shape {\n    double area();\n}"
+  },
+  {
+    "id": "java-15",
+    "code": "double average(int[] values) {\n    int sum = 0;\n    for (int v : values) {\n        sum += v;\n    }\n    return (double) sum / values.length;\n}"
+  }
+]

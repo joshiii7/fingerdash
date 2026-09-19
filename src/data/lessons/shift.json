@@ -1,0 +1,59 @@
+[
+  {
+    "id": "shift-1",
+    "title": "Shift and Capitals",
+    "group": "punctuation",
+    "targetKeys": ["S", "D", "K", "J", "L", "A"],
+    "words": [
+      "Sam",
+      "Dad",
+      "Kate",
+      "Jack",
+      "Lisa",
+      "Adam",
+      "Eli",
+      "Ted",
+      "Kim",
+      "Paul",
+      "Fred",
+      "Wes",
+      "Ivy",
+      "Rita",
+      "Jill",
+      "Omar",
+      "Pete",
+      "Sue",
+      "Dale",
+      "Kyle"
+    ],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 9,
+    "summary": "Capital letters with Shift held by the opposite hand, so neither hand has to twist.",
+    "explain": {
+      "goal": "Type capital letters by holding Shift with the pinky of the opposite hand.",
+      "why": [
+        "Shift is a modifier: you hold it while you press another key. Using the pinky on the opposite hand from the letter means neither hand has to twist or stretch.",
+        "If you capitalize a letter on the left with the left Shift, the same hand has to do two jobs at once, and it cramps.",
+        "So the rule is simple: letter on the left, Shift on the right. Letter on the right, Shift on the left."
+      ],
+      "how": [
+        "For a left-hand letter, hold Shift with your right pinky, press the letter, and let go.",
+        "For a right-hand letter, hold Shift with your left pinky, press the letter, and let go.",
+        "Let go of Shift straight away, so the next letter is lowercase."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Using the Shift key on the same side as the letter",
+          "reason": "One hand has to press two keys at once, which twists your wrist and slows you down."
+        },
+        {
+          "mistake": "Holding Shift too long",
+          "reason": "The next letter comes out capitalized too, and you have to fix it."
+        }
+      ],
+      "recap": "Shift with the pinky of the hand that is not typing the letter. Hold, press, release.",
+      "fingers": ["left-pinky", "right-pinky"]
+    }
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "id": "accuracy-1",
+    "title": "Accuracy Before Speed",
+    "group": "practice",
+    "targetKeys": ["a", "e", "i", "o", "t", "h"],
+    "words": [
+      "the",
+      "and",
+      "that",
+      "have",
+      "with",
+      "this",
+      "from",
+      "they",
+      "will",
+      "would",
+      "there",
+      "their",
+      "what",
+      "about",
+      "which",
+      "when",
+      "make",
+      "like",
+      "time",
+      "just",
+      "know",
+      "people",
+      "into",
+      "year",
+      "your",
+      "good",
+      "some",
+      "could",
+      "them",
+      "other",
+      "than",
+      "then",
+      "look",
+      "only",
+      "come",
+      "over",
+      "think",
+      "also",
+      "back",
+      "after"
+    ],
+    "wordCount": 25,
+    "minAccuracy": 95,
+    "minWpm": 15,
+    "summary": "Type common words for accuracy first, because speed grows out of clean, repeated movements.",
+    "explain": {
+      "goal": "Type everyday words at a pace where you make very few mistakes.",
+      "why": [
+        "Speed comes from accuracy and rhythm. Every mistake makes you stop, back up, and retype, and that costs more time than typing a little slower would have.",
+        "Muscle memory forms when you repeat correct movements. Repeating a mistake trains the mistake, so it is better to slow down until the right movement is the easy one.",
+        "That is also why you should not look at the keyboard. Looking makes you type for your eyes. Your fingers learn faster when they have to find the keys themselves.",
+        "The lessons so far passed at 90 to 92 percent accuracy. This one asks for 95, because clean typing is the foundation for going faster."
+      ],
+      "how": [
+        "Aim for accuracy first. If you are missing keys, slow down until you are hitting nearly all of them.",
+        "Once you are consistently accurate, raise your speed a little at a time.",
+        "Keep your eyes on the text, and let each finger return home after every reach."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Speeding up before you are accurate",
+          "reason": "Each mistake costs a pause and a correction, which adds up to more time than a slower, clean pace."
+        },
+        {
+          "mistake": "Looking at the keyboard to check",
+          "reason": "It slows your rhythm and stops your fingers from learning the keys by feel."
+        },
+        {
+          "mistake": "Ignoring your mistakes and pushing on",
+          "reason": "If you keep repeating a wrong movement, that is the one that becomes a habit."
+        }
+      ],
+      "recap": "Accuracy first, then speed. Clean, repeated movements build the muscle memory that speed grows from."
+    }
+  },
+  {
+    "id": "words-1",
+    "title": "Words That Swap Hands",
+    "group": "practice",
+    "targetKeys": ["a", "e", "i", "o", "t", "h"],
+    "words": [
+      "and",
+      "the",
+      "for",
+      "with",
+      "when",
+      "they",
+      "them",
+      "then",
+      "she",
+      "is",
+      "it",
+      "of",
+      "to",
+      "go",
+      "so",
+      "work",
+      "world",
+      "right",
+      "eight",
+      "visit",
+      "island",
+      "handle",
+      "turn",
+      "their",
+      "shape",
+      "social",
+      "problem",
+      "signal",
+      "field",
+      "chair"
+    ],
+    "wordCount": 25,
+    "minAccuracy": 92,
+    "minWpm": 15,
+    "summary": "Type words that swap hands often, because alternating hands makes typing smoother and quicker.",
+    "explain": {
+      "goal": "Type words where your hands take turns on almost every letter.",
+      "why": [
+        "When your hands alternate, one hand is already getting into position while the other is pressing. That overlap gives typing a smooth, flowing rhythm.",
+        "Real text is full of words like these, so practicing them trains the rhythm you will use every day.",
+        "Words are also where all your single-key practice comes together: each finger has to take its turn on time, and that is what a steady rhythm is."
+      ],
+      "how": [
+        "Let your hands take turns. As one presses, the other is already getting ready.",
+        "Keep the rhythm even instead of bursting on easy letters and stalling on hard ones.",
+        "Look at the text, and keep your accuracy above the pass mark."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Rushing the easy letters and stumbling on the hard ones",
+          "reason": "An uneven rhythm breaks your flow. Steady beats bursts."
+        },
+        {
+          "mistake": "Tensing your hands to go faster",
+          "reason": "Tension slows the fingers. A loose, even rhythm is quicker in the long run."
+        }
+      ],
+      "recap": "Alternating hands makes typing smooth. Keep the rhythm even and let the hands take turns."
+    }
+  }
+]

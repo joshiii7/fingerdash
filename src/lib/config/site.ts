@@ -1,0 +1,51 @@
+/** The author's GitHub profile. Every general "GitHub" link on the site points here. */
+export const GITHUB_PROFILE_URL = 'https://github.com/joshiii7';
+
+/** WhatsApp chat with the author (a wa.me link, so it opens WhatsApp or WhatsApp Web). */
+export const WHATSAPP_URL = 'https://wa.me/639382943739';
+
+/** The author's Facebook profile. */
+export const FACEBOOK_URL = 'https://www.facebook.com/joshi.adlawan/';
+
+/** The repository. Used only to build the Issues link, which has to point at the repo. */
+export const REPO_URL = 'https://github.com/joshiii7/fingerdash';
+export const ISSUES_URL = `${REPO_URL}/issues`;
+
+// The contact address is stored in pieces and only joined at runtime, so it
+// never appears as one contiguous string in the HTML or the JS bundle.
+const CONTACT_USER = 'adlawanjoshiangelo';
+const CONTACT_DOMAIN_PARTS = ['gmail', 'com'];
+
+export function buildContactEmail(): string {
+  return `${CONTACT_USER}@${CONTACT_DOMAIN_PARTS.join('.')}`;
+}
+
+export const SITE_NAME = 'Fingerdash';
+export const SITE_LOCALE = 'en_US';
+export const THEME_COLOR = '#0d1117';
+
+// ---------------------------------------------------------------------------
+// PLACEHOLDERS: fill these in before publishing. The build prints a warning
+// listing any that are still unset (see unfilledPlaceholders below).
+// ---------------------------------------------------------------------------
+
+/** The author's name, used in <meta name="author">, the About page, and structured data. */
+export const AUTHOR_NAME = 'Joshi Angelo Z. Adlawan';
+
+/** TODO: the public portfolio URL. Leave empty to hide the portfolio link on the About page. */
+export const PORTFOLIO_URL = '';
+
+/**
+ * The public site URL, ending in "/". It is the GitHub Pages address; for a custom domain, set
+ * the SITE_URL environment variable at build time instead of editing code.
+ */
+export const DEFAULT_SITE_URL = 'https://joshiii7.github.io/fingerdash/';
+
+/** Which placeholders above are still unfilled, for the build-time warning. */
+export function unfilledPlaceholders(siteUrl: string): string[] {
+  const missing: string[] = [];
+  if (AUTHOR_NAME.startsWith('TODO')) missing.push('AUTHOR_NAME (src/lib/config/site.ts)');
+  if (PORTFOLIO_URL === '') missing.push('PORTFOLIO_URL (src/lib/config/site.ts)');
+  if (siteUrl.includes('TODO')) missing.push('site URL (set the SITE_URL environment variable)');
+  return missing;
+}

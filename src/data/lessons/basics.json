@@ -1,0 +1,45 @@
+[
+  {
+    "id": "setup-1",
+    "group": "basics",
+    "title": "Before You Start",
+    "kind": "reading",
+    "targetKeys": [],
+    "words": [],
+    "wordCount": 0,
+    "minAccuracy": 0,
+    "minWpm": 0,
+    "summary": "Set up your seat, screen, and hands so typing stays comfortable, and see why it helps.",
+    "explain": {
+      "goal": "Get comfortable before you type a single key.",
+      "why": [
+        "Typing is a lot of small, repeated movements. If your body is tense or twisted while you do them, you tire out sooner and your hands feel it first. A relaxed setup lets you practice for longer with less strain.",
+        "Sitting upright with relaxed shoulders keeps your arms free to move. Elbows bent at a comfortable angle mean your hands can reach the keyboard without your shoulders creeping up toward your ears.",
+        "Wrists that stay roughly straight, and hover lightly instead of pressing hard into the desk, let your fingers move freely from the knuckles. With the screen at eye level, you can look at the text instead of craning your neck."
+      ],
+      "how": [
+        "Sit back in your chair with your feet flat on the floor and your back supported.",
+        "Let your shoulders drop, then bend your elbows to a comfortable angle so your forearms reach the keyboard easily.",
+        "Keep your wrists roughly straight. Let your hands hover just above the keys instead of resting hard on the desk.",
+        "Raise or lower the screen so the top of it is about level with your eyes.",
+        "Take a short break every so often. Stand up, shake out your hands, and look away from the screen."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Hunching toward the screen",
+          "reason": "It rounds your back and pulls your shoulders forward, which makes long sessions more tiring."
+        },
+        {
+          "mistake": "Pressing your wrists into the edge of the desk",
+          "reason": "Fingers move more freely when your hands can float, and a hard edge gets in the way."
+        },
+        {
+          "mistake": "Typing for a long time without a break",
+          "reason": "Short pauses give your hands and eyes a rest, so you stay accurate for longer."
+        }
+      ],
+      "recap": "Sit tall and relaxed, keep your wrists roughly straight, and put the screen at eye level. Comfort is what lets you keep practicing.",
+      "fingers": []
+    }
+  }
+]

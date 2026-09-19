@@ -1,0 +1,86 @@
+[
+  {
+    "id": "zones-1",
+    "group": "basics",
+    "title": "Finger Zones: Index Fingers",
+    "kind": "reading",
+    "targetKeys": ["f", "j"],
+    "words": [],
+    "wordCount": 0,
+    "minAccuracy": 0,
+    "minWpm": 0,
+    "summary": "See why your index fingers cover two columns each, and which keys belong to them.",
+    "explain": {
+      "goal": "Learn which keys belong to your index fingers, and why they cover more than the others.",
+      "why": [
+        "Each hand has five columns of keys to cover but only four typing fingers. One finger has to take two columns.",
+        "The index finger gets that job because it is the strongest, quickest, and most agile finger you have.",
+        "The keys are staggered, so each finger's column runs on a slight diagonal. The index finger covers the two columns closest to the middle of the keyboard.",
+        "After every reach, your index finger returns to its home key, F or J. Home stays your reference point."
+      ],
+      "how": [
+        "Left index finger: R, T, F, G, V, B and the number keys 4 and 5.",
+        "Right index finger: Y, U, H, J, N, M and the number keys 6 and 7.",
+        "The tinted keys on the keyboard show each finger's zone. The brighter keys are F and J, the home keys.",
+        "Reach with the finger, then come straight back to F or J."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Handing the second column to a different finger",
+          "reason": "If a middle finger reaches for G or H, it leaves its own keys, and nothing stays consistent."
+        },
+        {
+          "mistake": "Leaving the index finger away from home after a reach",
+          "reason": "Home is how you find every other key. Return to it each time."
+        }
+      ],
+      "recap": "Your index fingers each cover two columns because they are the strongest and most agile. Each returns to F or J after a reach.",
+      "fingers": ["left-index", "right-index"]
+    }
+  },
+  {
+    "id": "zones-2",
+    "group": "basics",
+    "title": "Finger Zones: The Other Fingers",
+    "kind": "reading",
+    "targetKeys": ["a", "s", "d", "k", "l", ";"],
+    "words": [],
+    "wordCount": 0,
+    "minAccuracy": 0,
+    "minWpm": 0,
+    "summary": "Learn the middle, ring, and pinky zones, and why the weaker fingers need slow, accurate practice.",
+    "explain": {
+      "goal": "Learn the zones of your middle fingers, ring fingers, and pinkies.",
+      "why": [
+        "The rest of the keyboard is split among your other six fingers, one column each. A key's column tells you its finger, so you never have to guess.",
+        "Your ring fingers and pinkies are less independent, so they feel clumsy at first. That is how hands work, and it is not a sign you are doing it wrong.",
+        "Practice them slowly and accurately instead of rushing. Speed comes after the movements are reliable."
+      ],
+      "how": [
+        "Left middle: 3, E, D, C. Right middle: 8, I, K and the comma.",
+        "Left ring: 2, W, S, X. Right ring: 9, O, L and the period.",
+        "Left pinky: 1, Q, A, Z. Right pinky: 0, P, the semicolon and the slash. Your pinkies also cover the keys at the outer edges, such as the hyphen, brackets, and apostrophe.",
+        "Find each zone on the keyboard: the tinted keys are the ones a finger owns, and the bright keys are the home keys."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Using a stronger finger to reach a key that is not its own",
+          "reason": "It feels quicker at first, but your hands never build one dependable map of the keyboard."
+        },
+        {
+          "mistake": "Getting frustrated when the ring finger is slow",
+          "reason": "It is normal. Slow, accurate repetition is what makes it independent."
+        }
+      ],
+      "recap": "Every key has one finger, decided by its column. Weak fingers get better with slow, accurate practice.",
+      "fingers": [
+        "left-pinky",
+        "left-ring",
+        "left-middle",
+        "right-middle",
+        "right-ring",
+        "right-pinky"
+      ]
+    }
+  }
+]

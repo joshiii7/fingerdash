@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cpp-01",
+    "code": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello, world!\" << std::endl;\n    return 0;\n}"
+  },
+  {
+    "id": "cpp-02",
+    "code": "int total = 0;\nfor (int i = 1; i <= 10; i++) {\n    total += i;\n}\nstd::cout << total << \"\\n\";"
+  },
+  {
+    "id": "cpp-03",
+    "code": "#include <vector>\n\nstd::vector<int> numbers = {1, 2, 3, 4, 5};\nnumbers.push_back(6);\nstd::cout << numbers.size() << \"\\n\";"
+  },
+  {
+    "id": "cpp-04",
+    "code": "class Counter {\npublic:\n    void increment() { count_++; }\n    int value() const { return count_; }\n\nprivate:\n    int count_ = 0;\n};"
+  },
+  {
+    "id": "cpp-05",
+    "code": "bool isEven(int n) {\n    return n % 2 == 0;\n}"
+  },
+  {
+    "id": "cpp-06",
+    "code": "int factorial(int n) {\n    if (n <= 1) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}"
+  },
+  {
+    "id": "cpp-07",
+    "code": "#include <string>\n\nstd::string name = \"Ana\";\nstd::string greeting = \"Hello, \" + name + \"!\";\nstd::cout << greeting << \"\\n\";"
+  },
+  {
+    "id": "cpp-08",
+    "code": "void swap(int& a, int& b) {\n    int temp = a;\n    a = b;\n    b = temp;\n}"
+  },
+  {
+    "id": "cpp-09",
+    "code": "int* values = new int[3]{1, 2, 3};\nstd::cout << values[0] << \"\\n\";\ndelete[] values;"
+  },
+  {
+    "id": "cpp-10",
+    "code": "#include <map>\n\nstd::map<std::string, int> ages;\nages[\"Ana\"] = 28;\nages[\"Ben\"] = 31;\nstd::cout << ages[\"Ana\"] << \"\\n\";"
+  },
+  {
+    "id": "cpp-11",
+    "code": "int count = 3;\nwhile (count > 0) {\n    std::cout << count << \"\\n\";\n    count--;\n}"
+  },
+  {
+    "id": "cpp-12",
+    "code": "struct Point {\n    int x;\n    int y;\n};\n\nPoint origin = {0, 0};"
+  },
+  {
+    "id": "cpp-13",
+    "code": "// Print every item in the list\nfor (const auto& item : items) {\n    std::cout << item << \"\\n\";\n}"
+  },
+  {
+    "id": "cpp-14",
+    "code": "template <typename T>\nT maxOf(T a, T b) {\n    return a > b ? a : b;\n}"
+  },
+  {
+    "id": "cpp-15",
+    "code": "if (x > 0 && y > 0) {\n    std::cout << \"positive\\n\";\n} else if (x < 0 || y < 0) {\n    std::cout << \"negative\\n\";\n}"
+  }
+]

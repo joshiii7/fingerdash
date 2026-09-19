@@ -1,0 +1,137 @@
+[
+  {
+    "id": "bottom-row-1",
+    "group": "bottom-row",
+    "title": "Bottom Row: C and M",
+    "targetKeys": ["c", "m"],
+    "words": ["cc", "mm", "cm", "mc", "come", "mac", "calm", "comic"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 9,
+    "summary": "Reach down to C and M from home, and see why the whole hand should stay still.",
+    "explain": {
+      "goal": "Reach C with your left middle finger and M with your right index finger.",
+      "why": [
+        "The bottom row is a short step down from home. As with the top row, you move only one finger and the rest stay home.",
+        "Coming back after each reach keeps your hand oriented. Shifting the whole hand down and back is slower and easy to get wrong.",
+        "The keys are staggered, so the finger that reaches down slants a little toward the middle. C stays with the left middle finger, and M belongs to the right index finger."
+      ],
+      "how": [
+        "Left middle finger reaches down from D to C.",
+        "Right index finger reaches down from J to M.",
+        "Return to home straight after the press."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Dropping your whole hand toward the bottom row",
+          "reason": "The other fingers lose home, and the next key becomes a guess."
+        },
+        {
+          "mistake": "Curling your fingers under your palm",
+          "reason": "It cramps the reach. Keep the fingers gently curved and let one of them extend."
+        }
+      ],
+      "recap": "The bottom row is one small step down. Move the finger, press, and return."
+    }
+  },
+  {
+    "id": "bottom-row-2",
+    "group": "bottom-row",
+    "title": "Bottom Row: V and N",
+    "targetKeys": ["v", "n"],
+    "words": ["vv", "nn", "vn", "nv", "van", "novel", "even", "vein"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 9,
+    "summary": "Add V and N with your index fingers, which cover the bottom-row keys nearest the middle.",
+    "explain": {
+      "goal": "Reach V with your left index finger and N with your right index finger.",
+      "why": [
+        "V and N sit just below your index-finger home keys, on the same diagonal.",
+        "Your index fingers cover two columns each, so V and B (left) and N and M (right) all belong to them."
+      ],
+      "how": [
+        "Left index finger reaches down from F to V. Right index finger reaches down from J to N.",
+        "Return to F or J after each press."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Using a middle finger for V or N",
+          "reason": "They belong to your index fingers. Keeping to the map means your hands stay predictable."
+        },
+        {
+          "mistake": "Letting the finger stay down after pressing",
+          "reason": "A finger that does not return makes the next key harder to find."
+        }
+      ],
+      "recap": "V and N are index-finger keys. Reach down, press, and come back to F and J."
+    }
+  },
+  {
+    "id": "bottom-row-3",
+    "group": "bottom-row",
+    "title": "Bottom Row: X, Z, B",
+    "targetKeys": ["x", "z", "b"],
+    "words": ["box", "buzz", "zebra", "exam", "brave", "size", "zoom", "verb"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 9,
+    "summary": "Add X, Z, and B, the awkward corners of the bottom row, with the fingers that own them.",
+    "explain": {
+      "goal": "Type X, Z, and B with the correct finger.",
+      "why": [
+        "X and Z are the longest reaches on the left, and B is the far end of your left index finger's zone.",
+        "They are used less often, so it is worth practicing them on purpose."
+      ],
+      "how": [
+        "Left ring finger reaches down from S to X. Left pinky reaches down from A to Z.",
+        "Left index finger reaches B, one key across from V.",
+        "Return home after each press."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Skipping a rarely used key",
+          "reason": "If you avoid it now, you will slow down every time it appears."
+        },
+        {
+          "mistake": "Pressing B with the wrong hand",
+          "reason": "B belongs to the left index finger. Keeping it there means each hand has a consistent job."
+        }
+      ],
+      "recap": "X and Z belong to the left ring finger and pinky. B belongs to the left index finger."
+    }
+  },
+  {
+    "id": "bottom-row-4",
+    "group": "bottom-row",
+    "title": "Bottom Row: Full Words",
+    "targetKeys": ["z", "x", "c", "v", "b", "n", "m"],
+    "words": ["become", "moving", "vacuum", "maximum", "combine", "amazing", "exam", "vanish"],
+    "wordCount": 25,
+    "minAccuracy": 92,
+    "minWpm": 12,
+    "summary": "Type words that use the whole bottom row, so the down-and-back reach becomes automatic.",
+    "explain": {
+      "goal": "Type real words made from bottom-row and home-row letters.",
+      "why": [
+        "Now every reach comes in a sequence, so the return to home keeps your hands from drifting.",
+        "This is the same skill as the top row, but in the other direction."
+      ],
+      "how": [
+        "Move only the finger that owns the key, and let it come back to home.",
+        "Look at the text, not at your hands."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Speeding up and dropping accuracy",
+          "reason": "The pass mark checks accuracy, and a steady pace is faster than typing and fixing."
+        },
+        {
+          "mistake": "Glancing at the keyboard on long words",
+          "reason": "Each glance breaks your rhythm. Trust the home row."
+        }
+      ],
+      "recap": "Reach down with one finger, return home, and keep your eyes on the words."
+    }
+  }
+]

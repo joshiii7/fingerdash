@@ -1,0 +1,105 @@
+[
+  {
+    "id": "punctuation-1",
+    "group": "punctuation",
+    "title": "Punctuation: Comma and Period",
+    "targetKeys": [",", "."],
+    "words": ["a,", "b.", "hi,", "ok.", "yes,", "no.", "cat,", "dog."],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 9,
+    "summary": "Type the comma and period, which belong to your middle and ring fingers and end most sentences.",
+    "explain": {
+      "goal": "Type the comma with your right middle finger and the period with your right ring finger.",
+      "why": [
+        "Commas and periods are the most common punctuation, and they sit on the bottom row, below K and L.",
+        "They follow the same rule as every other key: the column decides the finger."
+      ],
+      "how": [
+        "Right middle finger reaches down from K to the comma.",
+        "Right ring finger reaches down from L to the period.",
+        "Return to K and L after each press."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Using your index finger for the comma",
+          "reason": "The comma belongs to your middle finger. Reaching sideways moves your hand off home."
+        },
+        {
+          "mistake": "Forgetting the space after punctuation",
+          "reason": "The next word runs into the punctuation, and the pass mark counts that as a mistake."
+        }
+      ],
+      "recap": "Comma for the right middle finger, period for the right ring finger. Reach down and return."
+    }
+  },
+  {
+    "id": "punctuation-2",
+    "group": "punctuation",
+    "title": "Punctuation: Apostrophe and Quotes",
+    "targetKeys": ["'", "\""],
+    "words": ["it's", "don't", "\"hi\"", "can't", "she's", "\"no\"", "won't", "he's"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 9,
+    "summary": "Type the apostrophe and quotation marks, and see how Shift turns the apostrophe into a quote.",
+    "explain": {
+      "goal": "Type the apostrophe with your right pinky, and the quotation mark with Shift held by your left pinky.",
+      "why": [
+        "The apostrophe sits at the edge of the home row, so it belongs to your right pinky.",
+        "The quotation mark is the same key with Shift held. Because it is a right-hand key, the Shift comes from your left pinky, following the same opposite-hand rule as capital letters."
+      ],
+      "how": [
+        "Right pinky presses the apostrophe key, just right of ;.",
+        "For a quotation mark, hold Shift with your left pinky and press the same key.",
+        "Release Shift straight away."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Holding the right Shift for a right-hand key",
+          "reason": "Both pinkies would be busy on the same side, and your hand twists."
+        },
+        {
+          "mistake": "Typing the apostrophe with your ring finger",
+          "reason": "It belongs to the pinky. Keeping the map consistent is easier than remembering exceptions."
+        }
+      ],
+      "recap": "Apostrophe with the right pinky. For quotation marks, add Shift on the opposite side.",
+      "fingers": ["right-pinky", "left-pinky"]
+    }
+  },
+  {
+    "id": "punctuation-3",
+    "group": "punctuation",
+    "title": "Punctuation: Mixed",
+    "targetKeys": [",", ".", "'", "!", "?", ";", ":"],
+    "words": ["Well,", "really?", "it's", "great!", "Yes;", "wait:", "okay.", "sure,"],
+    "wordCount": 25,
+    "minAccuracy": 92,
+    "minWpm": 11,
+    "summary": "Mix commas, periods, and shifted punctuation, so every sentence-ending key feels familiar.",
+    "explain": {
+      "goal": "Type mixed punctuation with the right finger and the right Shift.",
+      "why": [
+        "Real sentences mix punctuation with words, so you need each mark to come from the right finger without stopping to think.",
+        "Marks like ! and ? and : are the shifted versions of number and punctuation keys, so the opposite-hand Shift rule applies."
+      ],
+      "how": [
+        "Right pinky: the semicolon, apostrophe, and the slash. For ? hold left Shift and press the slash.",
+        "For ! (from 1) hold right Shift and press 1 with your left pinky.",
+        "For : hold left Shift and press the semicolon."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Holding Shift too long after the mark",
+          "reason": "The next letter would be capitalized and need fixing."
+        },
+        {
+          "mistake": "Using the wrong Shift",
+          "reason": "Shift on the same hand as the key makes that hand twist. Use the opposite one."
+        }
+      ],
+      "recap": "Shifted punctuation uses the same opposite-hand Shift as capital letters."
+    }
+  }
+]

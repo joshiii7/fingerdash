@@ -1,0 +1,191 @@
+[
+  {
+    "id": "home-row-1",
+    "group": "home-row",
+    "title": "Home Row: F and J",
+    "targetKeys": ["f", "j"],
+    "words": ["ff", "jj", "fj", "jf", "fjf", "jfj", "ffj", "jff"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 5,
+    "summary": "Find the home row and the F and J bumps, so your fingers can always find their way back.",
+    "explain": {
+      "goal": "Learn where your hands rest, and type F and J without looking.",
+      "why": [
+        "The home row is your base camp. From it, every other key is only a short reach away, and coming back to it after each reach is what lets your hands find keys without your eyes.",
+        "Look closely at F and J. Most keyboards have a tiny raised bump on each. They are there so your index fingers can find home by feel, which means your eyes can stay on the screen.",
+        "Each finger owns its own keys. Because the assignment never changes, you never have to stop and decide which finger to use, and that is what turns typing into muscle memory.",
+        "Both thumbs rest lightly on the space bar. Either one can press it, so use whichever is more comfortable."
+      ],
+      "how": [
+        "Left hand: pinky on A, then S, D, and your index finger on F.",
+        "Right hand: index finger on J, then K, L, and your pinky on ;.",
+        "Feel for the bump on F and J. When both index fingers sit on their bumps, your hands are in the right place.",
+        "Rest both thumbs above the space bar. In this drill, use only your index fingers on F and J."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Looking down to check your fingers",
+          "reason": "Every glance breaks your flow. The bumps on F and J are there so you never need to."
+        },
+        {
+          "mistake": "Using one finger for lots of keys",
+          "reason": "Each finger has its own keys. Sharing them slows you down and makes it harder to build muscle memory."
+        },
+        {
+          "mistake": "Leaving your fingers hovering away from the home row",
+          "reason": "Home is your reference point. If your fingers drift, you lose track of where every other key is."
+        }
+      ],
+      "recap": "Home row is base camp: A S D F and J K L ;. Find home by feel using the bumps on F and J, and return to it after every reach."
+    }
+  },
+  {
+    "id": "home-row-2",
+    "group": "home-row",
+    "title": "Home Row: D and K",
+    "targetKeys": ["d", "k"],
+    "words": ["dd", "kk", "dk", "kd", "fdk", "jkd", "dkf", "kdj"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 5,
+    "summary": "Add D and K with your middle fingers, so each finger keeps its own keys.",
+    "explain": {
+      "goal": "Type D with your left middle finger and K with your right middle finger.",
+      "why": [
+        "Your middle fingers are the longest, so they reach the middle of the home row and stretch up and down comfortably.",
+        "Keeping to one finger per key from the start builds habits that keep working as you add more keys."
+      ],
+      "how": [
+        "Keep your index fingers on F and J, and lift only the finger you need.",
+        "Left middle finger presses D. Right middle finger presses K.",
+        "After each press, let the finger settle back on its home key."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Moving your whole hand to reach D or K",
+          "reason": "Your hand loses its place on the home row, and the next key becomes a guess."
+        },
+        {
+          "mistake": "Pressing D with your index finger because it is closer",
+          "reason": "It feels faster now, but it breaks the one-finger-per-key habit that makes later keys easy."
+        }
+      ],
+      "recap": "D belongs to your left middle finger and K to your right. Move the finger, not the hand."
+    }
+  },
+  {
+    "id": "home-row-3",
+    "group": "home-row",
+    "title": "Home Row: S and L",
+    "targetKeys": ["s", "l"],
+    "words": ["ss", "ll", "sl", "ls", "sad", "lad", "als", "sld"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 6,
+    "summary": "Add S and L with your ring fingers, which are less independent, so slow and steady wins.",
+    "explain": {
+      "goal": "Type S with your left ring finger and L with your right ring finger.",
+      "why": [
+        "Ring fingers feel clumsy at first because they are less independent than your index fingers. That is normal, and it improves with practice.",
+        "Practicing them slowly and accurately gives them time to learn. Rushing just teaches them to miss."
+      ],
+      "how": [
+        "Left ring finger presses S. Right ring finger presses L.",
+        "Keep the other fingers resting on their home keys while one moves.",
+        "Go slowly enough that every key is the right one."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Pressing hard to make a weak finger work",
+          "reason": "Extra force does not help. It only tires your hand, and a light touch registers just as well."
+        },
+        {
+          "mistake": "Speeding up before the finger is reliable",
+          "reason": "Fast mistakes teach the wrong movement, and you have to unlearn them later."
+        }
+      ],
+      "recap": "Ring fingers are slower learners. Go gently and accurately, and they will catch up."
+    }
+  },
+  {
+    "id": "home-row-4",
+    "group": "home-row",
+    "title": "Home Row: A and ;",
+    "targetKeys": ["a", ";"],
+    "words": ["aa", ";;", "a;", ";a", "ask", "als", "fall", "salad"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 6,
+    "summary": "Add A and ; with your pinkies, the shortest, but the ones that anchor each edge of home.",
+    "explain": {
+      "goal": "Type A with your left pinky and ; with your right pinky.",
+      "why": [
+        "Your pinkies are the shortest and the least independent, so they need the most patience. They also anchor the outer edge of each hand.",
+        "Because they take many keys later (Shift, Enter, punctuation), it pays to build a light, accurate touch now."
+      ],
+      "how": [
+        "Left pinky presses A. Right pinky presses ;.",
+        "Keep your other fingers on home while the pinky reaches and returns."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Skipping the pinkies and using a stronger one",
+          "reason": "You would have to unlearn that habit later, when the pinkies take on keys like Shift and Enter."
+        },
+        {
+          "mistake": "Tensing your whole hand for the pinky",
+          "reason": "Tension slows every other finger. Keep the hand loose and move only the finger."
+        }
+      ],
+      "recap": "Pinkies guard the edges of home. Train them slowly for a light, accurate touch."
+    }
+  },
+  {
+    "id": "home-row-5",
+    "group": "home-row",
+    "title": "Home Row: Full Words",
+    "targetKeys": ["a", "s", "d", "f", "j", "k", "l", ";"],
+    "words": [
+      "ask",
+      "asks",
+      "flask",
+      "salad",
+      "dad",
+      "add",
+      "fall",
+      "lass",
+      "fads",
+      "sad",
+      "lad",
+      "all"
+    ],
+    "wordCount": 25,
+    "minAccuracy": 92,
+    "minWpm": 10,
+    "summary": "Put all eight home keys together in real words, so the rhythm of each finger becomes automatic.",
+    "explain": {
+      "goal": "Type whole words using every home-row key.",
+      "why": [
+        "Single keys build the movement. Words build the rhythm, because your fingers now have to take turns.",
+        "Because every letter here is on the home row, your fingers never have to leave home, so this is the best time to practice a steady rhythm."
+      ],
+      "how": [
+        "Keep all eight fingers resting on A S D F and J K L ;.",
+        "Use the finger that owns each key, and use either thumb for the space bar.",
+        "Aim for a steady rhythm rather than a fast one."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Racing through and making mistakes",
+          "reason": "Mistakes cost more time than a slower, steady pace, because you have to stop and fix them."
+        },
+        {
+          "mistake": "Watching your fingers instead of the text",
+          "reason": "You are learning to type by feel. Keep your eyes on the words."
+        }
+      ],
+      "recap": "Home-row words teach rhythm. Stay relaxed, keep your eyes on the text, and let each finger take its turn."
+    }
+  }
+]

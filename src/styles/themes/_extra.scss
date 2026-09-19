@@ -1,0 +1,28 @@
+// Two bonus themes beyond dark/light.
+[data-theme='nord'] {
+  --color-bg: #2e3440;
+  --color-surface: #3b4252;
+  --color-surface-raised: #434c5e;
+  --color-border: #4c566a;
+  --color-text: #eceff4;
+  --color-text-muted: #9aa5b8;
+  --color-accent: #88c0d0;
+  --color-correct: #a3be8c;
+  --color-error: #bf616a;
+  --color-extra: #ebcb8b;
+  --color-caret: var(--color-accent);
+}
+
+[data-theme='solarized'] {
+  --color-bg: #002b36;
+  --color-surface: #073642;
+  --color-surface-raised: #0a4152;
+  --color-border: #586e75;
+  --color-text: #eee8d5;
+  --color-text-muted: #93a1a1;
+  --color-accent: #268bd2;
+  --color-correct: #859900;
+  --color-error: #dc322f;
+  --color-extra: #b58900;
+  --color-caret: var(--color-accent);
+}

@@ -1,0 +1,103 @@
+[
+  {
+    "id": "numbers-1",
+    "group": "numbers",
+    "title": "Numbers: 1 to 5",
+    "targetKeys": ["1", "2", "3", "4", "5"],
+    "words": ["12", "34", "51", "123", "234", "345", "451", "512"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 8,
+    "summary": "Reach up to 1 through 5 with the finger that owns each column, since it is the same finger you already use.",
+    "explain": {
+      "goal": "Type 1, 2, 3, 4, and 5 with the correct fingers.",
+      "why": [
+        "The number row is just one more row above the top row. You use the same finger as the keys below it, reaching one row further.",
+        "That is why the map works: every column has one finger, whether the key is a letter or a number."
+      ],
+      "how": [
+        "Left pinky: 1. Left ring finger: 2. Left middle finger: 3.",
+        "Left index finger: 4 and 5.",
+        "Reach up with the finger, press, and return to home."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Reaching for a number with a different finger",
+          "reason": "Each number sits in a column with its own finger. Sticking to it is easier than remembering exceptions."
+        },
+        {
+          "mistake": "Lifting your whole hand",
+          "reason": "The number row is a long reach, and moving the hand loses your home position."
+        }
+      ],
+      "recap": "Numbers follow the same columns as the letters below them. Same finger, one row further."
+    }
+  },
+  {
+    "id": "numbers-2",
+    "group": "numbers",
+    "title": "Numbers: 6 to 0",
+    "targetKeys": ["6", "7", "8", "9", "0"],
+    "words": ["67", "89", "90", "678", "789", "890", "906", "067"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 8,
+    "summary": "Reach 6 through 0 on the right side, using the same fingers that own those columns.",
+    "explain": {
+      "goal": "Type 6, 7, 8, 9, and 0 with the correct fingers.",
+      "why": [
+        "The right side of the number row follows the same rule as the left. Each number is typed by the finger that owns its column.",
+        "This is where your right index finger's second column shows up: it owns both 6 and 7."
+      ],
+      "how": [
+        "Right index finger: 6 and 7. Right middle finger: 8. Right ring finger: 9.",
+        "Right pinky: 0.",
+        "Press, then return to home."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Pressing 0 with your ring finger",
+          "reason": "0 sits in the pinky's column. Keeping to the map means you never have to think about it."
+        },
+        {
+          "mistake": "Going too fast",
+          "reason": "The long reach makes mistakes easy. Accuracy first, speed later."
+        }
+      ],
+      "recap": "Right hand numbers: 6 and 7 for the index finger, then 8, 9, and 0 for the middle, ring, and pinky fingers."
+    }
+  },
+  {
+    "id": "numbers-3",
+    "group": "numbers",
+    "title": "Numbers: Mixed",
+    "targetKeys": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "words": ["2024", "9001", "3141", "555", "8080", "1999", "4040", "7070"],
+    "wordCount": 25,
+    "minAccuracy": 92,
+    "minWpm": 10,
+    "summary": "Mix all the number keys together, so the number row feels as familiar as the letters.",
+    "explain": {
+      "goal": "Type mixed numbers with the correct finger every time.",
+      "why": [
+        "Real numbers jump around the number row, so you have to know each key's finger without stopping to think.",
+        "This is practice for that recall, and the same finger map keeps it predictable."
+      ],
+      "how": [
+        "Use the finger that owns each number's column, and return to home after each reach.",
+        "Keep your eyes on the text."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Looking at the keyboard for each digit",
+          "reason": "You would lose the rhythm you have been building. The columns are in your hands by now."
+        },
+        {
+          "mistake": "Hitting the row below instead of the number",
+          "reason": "A missed reach types a letter. Reach fully up before pressing."
+        }
+      ],
+      "recap": "Numbers are just one more row. Use the same finger for the column and return home."
+    }
+  }
+]

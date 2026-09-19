@@ -1,0 +1,129 @@
+{
+  "banner-home": {
+    "desktop": [
+      {
+        "file": "banners/banner-home-1584.webp",
+        "width": 1584,
+        "height": 672,
+        "bytes": 33198
+      },
+      {
+        "file": "banners/banner-home-1024.webp",
+        "width": 1024,
+        "height": 434,
+        "bytes": 17940
+      }
+    ],
+    "mobile": {
+      "file": "banners/banner-home-mobile.webp",
+      "width": 620,
+      "height": 672,
+      "bytes": 19720
+    },
+    "originalBytes": 581707
+  },
+  "banner-page": {
+    "desktop": [
+      {
+        "file": "banners/banner-page-1584.webp",
+        "width": 1584,
+        "height": 672,
+        "bytes": 45452
+      },
+      {
+        "file": "banners/banner-page-1024.webp",
+        "width": 1024,
+        "height": 434,
+        "bytes": 24212
+      }
+    ],
+    "mobile": {
+      "file": "banners/banner-page-mobile.webp",
+      "width": 800,
+      "height": 550,
+      "bytes": 29392
+    },
+    "originalBytes": 619912
+  },
+  "fingerdash-logo": {
+    "desktop": [
+      {
+        "file": "logo/fingerdash-logo.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 8628
+      }
+    ],
+    "mobile": null,
+    "originalBytes": 410182
+  },
+  "screenshot-test": {
+    "desktop": [
+      {
+        "file": "screenshots/test-1440.webp",
+        "width": 1440,
+        "height": 772,
+        "bytes": 42946
+      },
+      {
+        "file": "screenshots/test-960.webp",
+        "width": 960,
+        "height": 515,
+        "bytes": 25380
+      }
+    ],
+    "mobile": {
+      "file": "screenshots/test-mobile.webp",
+      "width": 780,
+      "height": 1688,
+      "bytes": 62864
+    },
+    "originalBytes": 571365
+  },
+  "screenshot-tutorial": {
+    "desktop": [
+      {
+        "file": "screenshots/tutorial-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 51344
+      },
+      {
+        "file": "screenshots/tutorial-960.webp",
+        "width": 960,
+        "height": 600,
+        "bytes": 31454
+      }
+    ],
+    "mobile": {
+      "file": "screenshots/tutorial-mobile.webp",
+      "width": 780,
+      "height": 1688,
+      "bytes": 40442
+    },
+    "originalBytes": 256938
+  },
+  "screenshot-tutorial-intro": {
+    "desktop": [
+      {
+        "file": "screenshots/tutorial-intro-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 68656
+      },
+      {
+        "file": "screenshots/tutorial-intro-960.webp",
+        "width": 960,
+        "height": 600,
+        "bytes": 39754
+      }
+    ],
+    "mobile": {
+      "file": "screenshots/tutorial-intro-mobile.webp",
+      "width": 780,
+      "height": 1688,
+      "bytes": 68338
+    },
+    "originalBytes": 312175
+  }
+}

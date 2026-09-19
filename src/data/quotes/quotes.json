@@ -1,0 +1,296 @@
+[
+  {
+    "id": "q01",
+    "text": "Well done is better than well said.",
+    "source": "Benjamin Franklin, Poor Richard's Almanack",
+    "length": "short"
+  },
+  {
+    "id": "q02",
+    "text": "Early to bed and early to rise, makes a man healthy, wealthy, and wise.",
+    "source": "Benjamin Franklin",
+    "length": "short"
+  },
+  {
+    "id": "q03",
+    "text": "Call me Ishmael.",
+    "source": "Herman Melville, Moby-Dick",
+    "length": "short"
+  },
+  {
+    "id": "q04",
+    "text": "To be, or not to be, that is the question.",
+    "source": "William Shakespeare, Hamlet",
+    "length": "short"
+  },
+  {
+    "id": "q05",
+    "text": "I can resist everything except temptation.",
+    "source": "Oscar Wilde, Lady Windermere's Fan",
+    "length": "short"
+  },
+  {
+    "id": "q06",
+    "text": "We are all in the gutter, but some of us are looking at the stars.",
+    "source": "Oscar Wilde, Lady Windermere's Fan",
+    "length": "short"
+  },
+  {
+    "id": "q07",
+    "text": "You see, but you do not observe.",
+    "source": "Arthur Conan Doyle, A Scandal in Bohemia",
+    "length": "short"
+  },
+  {
+    "id": "q08",
+    "text": "To be great is to be misunderstood.",
+    "source": "Ralph Waldo Emerson, Self-Reliance",
+    "length": "short"
+  },
+  {
+    "id": "q09",
+    "text": "Nothing great was ever achieved without enthusiasm.",
+    "source": "Ralph Waldo Emerson, Circles",
+    "length": "short"
+  },
+  {
+    "id": "q10",
+    "text": "\"Curiouser and curiouser!\" cried Alice.",
+    "source": "Lewis Carroll, Alice's Adventures in Wonderland",
+    "length": "short"
+  },
+  {
+    "id": "q11",
+    "text": "Why, sometimes I've believed as many as six impossible things before breakfast.",
+    "source": "Lewis Carroll, Through the Looking-Glass",
+    "length": "short"
+  },
+  {
+    "id": "q12",
+    "text": "To strive, to seek, to find, and not to yield.",
+    "source": "Alfred, Lord Tennyson, Ulysses",
+    "length": "short"
+  },
+  {
+    "id": "q13",
+    "text": "The Lord is my shepherd; I shall not want.",
+    "source": "Psalm 23:1, King James Bible",
+    "length": "short"
+  },
+  {
+    "id": "q14",
+    "text": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+    "source": "John 1:1, King James Bible",
+    "length": "short"
+  },
+  {
+    "id": "q15",
+    "text": "To every thing there is a season, and a time to every purpose under the heaven.",
+    "source": "Ecclesiastes 3:1, King James Bible",
+    "length": "short"
+  },
+  {
+    "id": "q16",
+    "text": "Actions speak louder than words.",
+    "source": "Proverb",
+    "length": "short"
+  },
+  {
+    "id": "q17",
+    "text": "A stitch in time saves nine.",
+    "source": "Proverb",
+    "length": "short"
+  },
+  {
+    "id": "q18",
+    "text": "Where there is a will, there is a way.",
+    "source": "Proverb",
+    "length": "short"
+  },
+  {
+    "id": "q19",
+    "text": "The early bird catches the worm.",
+    "source": "Proverb",
+    "length": "short"
+  },
+  {
+    "id": "q20",
+    "text": "Rome was not built in a day.",
+    "source": "Proverb",
+    "length": "short"
+  },
+  {
+    "id": "q21",
+    "text": "All the world's a stage, and all the men and women merely players; they have their exits and their entrances, and one man in his time plays many parts.",
+    "source": "William Shakespeare, As You Like It",
+    "length": "medium"
+  },
+  {
+    "id": "q22",
+    "text": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+    "source": "Jane Austen, Pride and Prejudice",
+    "length": "medium"
+  },
+  {
+    "id": "q23",
+    "text": "How often have I said to you that when you have eliminated the impossible, whatever remains, however improbable, must be the truth?",
+    "source": "Arthur Conan Doyle, The Sign of the Four",
+    "length": "medium"
+  },
+  {
+    "id": "q24",
+    "text": "The mass of men lead lives of quiet desperation. What is called resignation is confirmed desperation.",
+    "source": "Henry David Thoreau, Walden",
+    "length": "medium"
+  },
+  {
+    "id": "q25",
+    "text": "I celebrate myself, and sing myself, and what I assume you shall assume, for every atom belonging to me as good belongs to you.",
+    "source": "Walt Whitman, Song of Myself",
+    "length": "medium"
+  },
+  {
+    "id": "q26",
+    "text": "Hope is the thing with feathers that perches in the soul, and sings the tune without the words, and never stops at all.",
+    "source": "Emily Dickinson",
+    "length": "medium"
+  },
+  {
+    "id": "q27",
+    "text": "Once upon a midnight dreary, while I pondered, weak and weary, over many a quaint and curious volume of forgotten lore.",
+    "source": "Edgar Allan Poe, The Raven",
+    "length": "medium"
+  },
+  {
+    "id": "q28",
+    "text": "Two roads diverged in a yellow wood, and sorry I could not travel both and be one traveler, long I stood and looked down one as far as I could to where it bent in the undergrowth;",
+    "source": "Robert Frost, The Road Not Taken",
+    "length": "medium"
+  },
+  {
+    "id": "q29",
+    "text": "I wandered lonely as a cloud that floats on high o'er vales and hills, when all at once I saw a crowd, a host, of golden daffodils;",
+    "source": "William Wordsworth, I Wandered Lonely as a Cloud",
+    "length": "medium"
+  },
+  {
+    "id": "q30",
+    "text": "In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep.",
+    "source": "Genesis 1:1-2, King James Bible",
+    "length": "medium"
+  },
+  {
+    "id": "q31",
+    "text": "'Twas brillig, and the slithy toves did gyre and gimble in the wabe: all mimsy were the borogoves, and the mome raths outgrabe.",
+    "source": "Lewis Carroll, Jabberwocky",
+    "length": "medium"
+  },
+  {
+    "id": "q32",
+    "text": "There is grandeur in this view of life, with its several powers, having been originally breathed into a few forms or into one;",
+    "source": "Charles Darwin, On the Origin of Species",
+    "length": "medium"
+  },
+  {
+    "id": "q33",
+    "text": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+    "source": "Abraham Lincoln, Gettysburg Address",
+    "length": "medium"
+  },
+  {
+    "id": "q34",
+    "text": "I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived.",
+    "source": "Henry David Thoreau, Walden",
+    "length": "medium"
+  },
+  {
+    "id": "q35",
+    "text": "If you can keep your head when all about you are losing theirs and blaming it on you, if you can trust yourself when all men doubt you, but make allowance for their doubting too;",
+    "source": "Rudyard Kipling, If-",
+    "length": "medium"
+  },
+  {
+    "id": "q36",
+    "text": "Call me Ishmael. Some years ago - never mind how long precisely - having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+    "source": "Herman Melville, Moby-Dick",
+    "length": "medium"
+  },
+  {
+    "id": "q37",
+    "text": "Once upon a midnight dreary, while I pondered, weak and weary, over many a quaint and curious volume of forgotten lore, while I nodded, nearly napping, suddenly there came a tapping, as of some one gently rapping, rapping at my chamber door.",
+    "source": "Edgar Allan Poe, The Raven",
+    "length": "long"
+  },
+  {
+    "id": "q38",
+    "text": "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness. That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed.",
+    "source": "Declaration of Independence",
+    "length": "long"
+  },
+  {
+    "id": "q39",
+    "text": "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.",
+    "source": "Constitution of the United States, Preamble",
+    "length": "long"
+  },
+  {
+    "id": "q40",
+    "text": "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
+    "source": "Charles Dickens, A Tale of Two Cities",
+    "length": "long"
+  },
+  {
+    "id": "q41",
+    "text": "To every thing there is a season, and a time to every purpose under the heaven: a time to be born, and a time to die; a time to plant, and a time to pluck up that which is planted; a time to kill, and a time to heal; a time to break down, and a time to build up.",
+    "source": "Ecclesiastes 3:1-3, King James Bible",
+    "length": "long"
+  },
+  {
+    "id": "q42",
+    "text": "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure.",
+    "source": "Abraham Lincoln, Gettysburg Address",
+    "length": "long"
+  },
+  {
+    "id": "q43",
+    "text": "Accuracy first, speed second. The fast fingers come later.",
+    "source": "Fingerdash",
+    "length": "short"
+  },
+  {
+    "id": "q44",
+    "text": "Every typo is a small lesson. Notice which key betrayed you, slow down for a moment, and let the rhythm come back on its own.",
+    "source": "Fingerdash",
+    "length": "medium"
+  },
+  {
+    "id": "q45",
+    "text": "Keep your eyes on the text, not on your hands. Your fingers already know where the keys are, so trust them and let your focus stay one word ahead.",
+    "source": "Fingerdash",
+    "length": "medium"
+  },
+  {
+    "id": "q46",
+    "text": "A steady pace beats a frantic one. Type at the speed where you make almost no mistakes, and the numbers will climb without any extra effort.",
+    "source": "Fingerdash",
+    "length": "medium"
+  },
+  {
+    "id": "q47",
+    "text": "Touch typing is a skill built from tiny repetitions. Each lesson adds a few keys, each session smooths the rough edges, and after enough quiet practice your hands move faster than you can think about them. There is no shortcut, only the pleasant habit of coming back tomorrow.",
+    "source": "Fingerdash",
+    "length": "long"
+  },
+  {
+    "id": "q48",
+    "text": "The home row is the anchor. Your index fingers rest on the small bumps of the F and J keys, and every other finger stays curled nearby, ready to reach out and return. Always come home after a reach, and the whole keyboard will start to feel small.",
+    "source": "Fingerdash",
+    "length": "long"
+  },
+  {
+    "id": "q49",
+    "text": "When you practice, choose accuracy over speed for the first few minutes. Errors teach your fingers the wrong path, and unlearning is slower than learning. Build the clean habit first, then let the pace rise gently until it reaches the edge of your comfort.",
+    "source": "Fingerdash",
+    "length": "long"
+  }
+]

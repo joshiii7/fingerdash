@@ -1,0 +1,66 @@
+[
+  {
+    "id": "py-01",
+    "code": "numbers = [1, 2, 3, 4, 5]\nsquares = [n * n for n in numbers]\nprint(squares)"
+  },
+  {
+    "id": "py-02",
+    "code": "def greet(name):\n    return f\"Hello, {name}!\"\n\n\nprint(greet(\"world\"))"
+  },
+  {
+    "id": "py-03",
+    "code": "total = 0\nfor i in range(1, 11):\n    total += i\nprint(total)"
+  },
+  {
+    "id": "py-04",
+    "code": "class Counter:\n    def __init__(self):\n        self.count = 0\n\n    def increment(self):\n        self.count += 1"
+  },
+  {
+    "id": "py-05",
+    "code": "user = {\"name\": \"Ana\", \"age\": 28}\nfor key, value in user.items():\n    print(key, \"=\", value)"
+  },
+  {
+    "id": "py-06",
+    "code": "def is_even(n):\n    return n % 2 == 0\n\n\nevens = [n for n in range(10) if is_even(n)]"
+  },
+  {
+    "id": "py-07",
+    "code": "# Count how often each word appears\nwords = [\"a\", \"b\", \"a\", \"c\", \"a\"]\ncounts = {}\nfor word in words:\n    counts[word] = counts.get(word, 0) + 1"
+  },
+  {
+    "id": "py-08",
+    "code": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)"
+  },
+  {
+    "id": "py-09",
+    "code": "try:\n    value = int(\"42\")\n    print(value)\nexcept ValueError:\n    print(\"not a number\")"
+  },
+  {
+    "id": "py-10",
+    "code": "count = 3\nwhile count > 0:\n    print(count)\n    count -= 1"
+  },
+  {
+    "id": "py-11",
+    "code": "def average(values):\n    if not values:\n        return 0\n    return sum(values) / len(values)"
+  },
+  {
+    "id": "py-12",
+    "code": "names = [\"ana\", \"ben\", \"cara\"]\nupper = list(map(lambda s: s.upper(), names))\nprint(upper)"
+  },
+  {
+    "id": "py-13",
+    "code": "with open(\"notes.txt\", \"w\") as file:\n    file.write(\"first line\\n\")\n    file.write(\"second line\\n\")"
+  },
+  {
+    "id": "py-14",
+    "code": "point = (3, 4)\nx, y = point\ndistance = (x ** 2 + y ** 2) ** 0.5\nprint(distance)"
+  },
+  {
+    "id": "py-15",
+    "code": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        return self.name + \" makes a sound\""
+  },
+  {
+    "id": "py-16",
+    "code": "scores = {\"ana\": 90, \"ben\": 85}\nbest = max(scores, key=scores.get)\nprint(best, scores[best])"
+  }
+]

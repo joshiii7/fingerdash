@@ -1,0 +1,181 @@
+[
+  {
+    "id": "top-row-1",
+    "group": "top-row",
+    "title": "Top Row: E and I",
+    "targetKeys": ["e", "i"],
+    "words": ["ee", "ii", "ei", "ie", "eie", "iei", "life", "did"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 8,
+    "summary": "Reach up to E and I from home and come back, without lifting your whole hand.",
+    "explain": {
+      "goal": "Reach E and I on the top row with your middle fingers, then return home.",
+      "why": [
+        "The top row is one short step up from home. If you move only the finger, your other fingers stay on the home row and keep their bearings.",
+        "Returning to home after each reach is what lets you find keys by feel. Without it, every reach becomes a small search.",
+        "Moving your whole hand instead of one finger is slower and loses your place, so the habit worth building is finger only."
+      ],
+      "how": [
+        "Left middle finger reaches up from D to E. Right middle finger reaches up from K to I.",
+        "Keep the other fingers resting on their home keys.",
+        "Press, then bring the finger straight back down to D or K."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Lifting your whole hand to reach the top row",
+          "reason": "Your other fingers leave home, so the next key is a guess."
+        },
+        {
+          "mistake": "Leaving the finger up after the press",
+          "reason": "If it does not return, the next home-row key has to be found again."
+        }
+      ],
+      "recap": "Reach with one finger, press, and go straight back home. The rest of your hand stays put."
+    }
+  },
+  {
+    "id": "top-row-2",
+    "group": "top-row",
+    "title": "Top Row: R and U",
+    "targetKeys": ["r", "u"],
+    "words": ["rr", "uu", "ru", "ur", "sure", "fur", "jury", "dark"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 8,
+    "summary": "Add R and U with your index fingers, which already own that column, so the reach feels natural.",
+    "explain": {
+      "goal": "Reach R with your left index finger and U with your right index finger.",
+      "why": [
+        "R and U sit just above F and J. Your index fingers already own those columns, so the reach is short.",
+        "These are common letters, so learning them early makes real words possible."
+      ],
+      "how": [
+        "Left index finger reaches up from F to R. Right index finger reaches up from J to U.",
+        "Return to F or J straight after the press."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Reaching for R or U with a middle finger",
+          "reason": "They belong to the index fingers. Using another finger breaks the map you are learning."
+        },
+        {
+          "mistake": "Twisting your wrist to reach",
+          "reason": "A small finger movement is enough, and twisting throws your hand off home."
+        }
+      ],
+      "recap": "R and U belong to your index fingers. Reach, press, and come back to F and J."
+    }
+  },
+  {
+    "id": "top-row-3",
+    "group": "top-row",
+    "title": "Top Row: W and O",
+    "targetKeys": ["w", "o"],
+    "words": ["ww", "oo", "wo", "ow", "wood", "slow", "word", "look"],
+    "wordCount": 20,
+    "minAccuracy": 90,
+    "minWpm": 8,
+    "summary": "Add W and O with your ring fingers, and practice slowly since these fingers are less independent.",
+    "explain": {
+      "goal": "Reach W with your left ring finger and O with your right ring finger.",
+      "why": [
+        "Ring fingers are less independent, so the reach up to W and O can feel awkward at first.",
+        "Slow, accurate practice trains them. Speed comes once they hit the right key every time."
+      ],
+      "how": [
+        "Left ring finger reaches up from S to W. Right ring finger reaches up from L to O.",
+        "Keep the rest of your hand relaxed and on home."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Rushing and hitting the neighboring key",
+          "reason": "A wrong key needs a correction, which costs more time than a slow, accurate press."
+        },
+        {
+          "mistake": "Tensing up the whole hand",
+          "reason": "Tension slows the other fingers too. Stay loose and move one finger."
+        }
+      ],
+      "recap": "W and O belong to the ring fingers. Go slowly, stay relaxed, and return to S and L."
+    }
+  },
+  {
+    "id": "top-row-4",
+    "group": "top-row",
+    "title": "Top Row: Q, T, Y, P",
+    "targetKeys": ["q", "t", "y", "p"],
+    "words": ["quit", "type", "play", "quiet", "party", "study", "toy", "pity"],
+    "wordCount": 25,
+    "minAccuracy": 90,
+    "minWpm": 9,
+    "summary": "Add Q, T, Y, and P, the edge keys of the top row, each with the finger that owns it.",
+    "explain": {
+      "goal": "Type Q, T, Y, and P with the correct finger each time.",
+      "why": [
+        "These four sit at the edges of the top row, so they are the longest reaches. Getting them right keeps the rest of your hand steady.",
+        "T and Y belong to your index fingers, which cover two columns. Q and P belong to your pinkies."
+      ],
+      "how": [
+        "Left pinky reaches up from A to Q. Right pinky reaches up from ; to P.",
+        "Left index finger reaches T. Right index finger reaches Y.",
+        "Return to the home key after each press."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Stretching a stronger finger sideways to reach Q or P",
+          "reason": "It looks like a shortcut, but it pulls that finger off its own keys."
+        },
+        {
+          "mistake": "Pressing T or Y with a middle finger",
+          "reason": "Both belong to the index fingers, which cover two columns each."
+        }
+      ],
+      "recap": "Q and P belong to your pinkies, T and Y to your index fingers. Reach, press, and return."
+    }
+  },
+  {
+    "id": "top-row-5",
+    "group": "top-row",
+    "title": "Top Row: Full Words",
+    "targetKeys": ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
+    "words": [
+      "quiet",
+      "write",
+      "type",
+      "your",
+      "story",
+      "power",
+      "quite",
+      "riot",
+      "outer",
+      "pretty"
+    ],
+    "wordCount": 25,
+    "minAccuracy": 92,
+    "minWpm": 12,
+    "summary": "Type real words from the whole top row, so the reaches become a smooth habit.",
+    "explain": {
+      "goal": "Type real words that mix home row and top row keys.",
+      "why": [
+        "Now you will use the whole top row. In real words, fingers reach up and come back down constantly.",
+        "This is where home-row return pays off, because every reach is followed by a quick return."
+      ],
+      "how": [
+        "Use the finger that owns each key, and let it return to home after each reach.",
+        "Keep your eyes on the text, not on your fingers."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Hunting for a key you have not learned yet",
+          "reason": "Stop and check the keyboard guide if you are unsure, then go back to typing by feel."
+        },
+        {
+          "mistake": "Going faster than your accuracy allows",
+          "reason": "Accuracy is what the pass mark checks, and mistakes cost more time than a steady pace."
+        }
+      ],
+      "recap": "Reach up with one finger, come back to home, and keep your eyes on the words."
+    }
+  }
+]

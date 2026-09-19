@@ -1,0 +1,62 @@
+[
+  {
+    "id": "html-01",
+    "code": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <title>Hello</title>\n  </head>\n  <body>\n    <h1>Hello, world!</h1>\n  </body>\n</html>"
+  },
+  {
+    "id": "html-02",
+    "code": "<ul>\n  <li>Apples</li>\n  <li>Bananas</li>\n  <li>Cherries</li>\n</ul>"
+  },
+  {
+    "id": "html-03",
+    "code": "<form action=\"/subscribe\" method=\"post\">\n  <label for=\"email\">Email</label>\n  <input id=\"email\" type=\"email\" name=\"email\">\n  <button type=\"submit\">Join</button>\n</form>"
+  },
+  {
+    "id": "html-04",
+    "code": "<nav>\n  <a href=\"/\">Home</a>\n  <a href=\"/about\">About</a>\n  <a href=\"/contact\">Contact</a>\n</nav>"
+  },
+  {
+    "id": "html-05",
+    "code": "<table>\n  <tr>\n    <th>Name</th>\n    <th>Score</th>\n  </tr>\n  <tr>\n    <td>Ana</td>\n    <td>90</td>\n  </tr>\n</table>"
+  },
+  {
+    "id": "html-06",
+    "code": "<figure>\n  <img src=\"cat.webp\" alt=\"A sleeping cat\" width=\"320\" height=\"240\">\n  <figcaption>The cat is <strong>very</strong> sleepy.</figcaption>\n</figure>"
+  },
+  {
+    "id": "html-07",
+    "code": "<article class=\"card\">\n  <h2>Title</h2>\n  <p>Some short text goes here.</p>\n  <a href=\"#more\">Read more</a>\n</article>"
+  },
+  {
+    "id": "html-08",
+    "code": "<select name=\"color\" id=\"color\">\n  <option value=\"red\">Red</option>\n  <option value=\"green\">Green</option>\n  <option value=\"blue\">Blue</option>\n</select>"
+  },
+  {
+    "id": "html-09",
+    "code": "<header>\n  <h1>My Site</h1>\n  <p>Notes &amp; ideas</p>\n</header>"
+  },
+  {
+    "id": "html-10",
+    "code": "<button type=\"button\" id=\"save\" disabled>Save</button>\n<button type=\"reset\" id=\"clear\">Clear</button>\n<script src=\"app.js\"></script>"
+  },
+  {
+    "id": "html-11",
+    "code": "<!-- Main content starts here -->\n<main id=\"main-content\">\n  <section>\n    <h2>About</h2>\n  </section>\n</main>"
+  },
+  {
+    "id": "html-12",
+    "code": "<ol>\n  <li>Mix the flour</li>\n  <li>Add the eggs</li>\n  <li>Bake for 20 minutes</li>\n</ol>"
+  },
+  {
+    "id": "html-13",
+    "code": "<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel=\"stylesheet\" href=\"style.css\">"
+  },
+  {
+    "id": "html-14",
+    "code": "<footer>\n  <p>&copy; 2026 Example Inc.</p>\n  <a href=\"mailto:hi@example.com\">Contact us</a>\n</footer>"
+  },
+  {
+    "id": "html-15",
+    "code": "<div class=\"grid\">\n  <div class=\"item\">One</div>\n  <div class=\"item\">Two</div>\n  <div class=\"item\">Three</div>\n</div>"
+  }
+]

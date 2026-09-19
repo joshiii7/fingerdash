@@ -1,0 +1,62 @@
+[
+  {
+    "id": "c-01",
+    "code": "#include <stdio.h>\n\nint main(void) {\n    printf(\"Hello, world!\\n\");\n    return 0;\n}"
+  },
+  {
+    "id": "c-02",
+    "code": "int total = 0;\nfor (int i = 1; i <= 10; i++) {\n    total += i;\n}\nprintf(\"%d\\n\", total);"
+  },
+  {
+    "id": "c-03",
+    "code": "int numbers[5] = {1, 2, 3, 4, 5};\nfor (int i = 0; i < 5; i++) {\n    printf(\"%d \", numbers[i]);\n}\nprintf(\"\\n\");"
+  },
+  {
+    "id": "c-04",
+    "code": "int is_even(int n) {\n    return n % 2 == 0;\n}"
+  },
+  {
+    "id": "c-05",
+    "code": "int factorial(int n) {\n    if (n <= 1) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}"
+  },
+  {
+    "id": "c-06",
+    "code": "void swap(int *a, int *b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}"
+  },
+  {
+    "id": "c-07",
+    "code": "#include <string.h>\n\nchar name[16];\nstrcpy(name, \"Ana\");\nprintf(\"%s has %zu letters\\n\", name, strlen(name));"
+  },
+  {
+    "id": "c-08",
+    "code": "struct point {\n    int x;\n    int y;\n};\n\nstruct point origin = {0, 0};"
+  },
+  {
+    "id": "c-09",
+    "code": "int count = 3;\nwhile (count > 0) {\n    printf(\"%d\\n\", count);\n    count--;\n}"
+  },
+  {
+    "id": "c-10",
+    "code": "#include <stdlib.h>\n\nint *values = malloc(3 * sizeof(int));\nvalues[0] = 42;\nprintf(\"%d\\n\", values[0]);\nfree(values);"
+  },
+  {
+    "id": "c-11",
+    "code": "#define MAX_SIZE 100\n\nint buffer[MAX_SIZE];\nbuffer[0] = 1;"
+  },
+  {
+    "id": "c-12",
+    "code": "/* Return the larger of two numbers */\nint max(int a, int b) {\n    return a > b ? a : b;\n}"
+  },
+  {
+    "id": "c-13",
+    "code": "char letter = 'a';\nif (letter >= 'a' && letter <= 'z') {\n    printf(\"lowercase\\n\");\n}"
+  },
+  {
+    "id": "c-14",
+    "code": "double average(const int *values, int length) {\n    int sum = 0;\n    for (int i = 0; i < length; i++) {\n        sum += values[i];\n    }\n    return (double) sum / length;\n}"
+  },
+  {
+    "id": "c-15",
+    "code": "switch (day) {\n    case 1:\n        printf(\"Monday\\n\");\n        break;\n    default:\n        printf(\"Other\\n\");\n}"
+  }
+]

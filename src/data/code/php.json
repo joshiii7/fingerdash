@@ -1,0 +1,62 @@
+[
+  {
+    "id": "php-01",
+    "code": "<?php\n$numbers = [1, 2, 3, 4, 5];\n$doubled = array_map(fn($n) => $n * 2, $numbers);\nprint_r($doubled);"
+  },
+  {
+    "id": "php-02",
+    "code": "<?php\nfunction greet(string $name): string\n{\n    return \"Hello, $name!\";\n}\necho greet('world');"
+  },
+  {
+    "id": "php-03",
+    "code": "<?php\n$total = 0;\nfor ($i = 1; $i <= 10; $i++) {\n    $total += $i;\n}\necho $total;"
+  },
+  {
+    "id": "php-04",
+    "code": "<?php\nclass Counter\n{\n    private int $count = 0;\n\n    public function increment(): void\n    {\n        $this->count++;\n    }\n}"
+  },
+  {
+    "id": "php-05",
+    "code": "<?php\n$user = ['name' => 'Ana', 'age' => 28];\nforeach ($user as $key => $value) {\n    echo \"$key: $value\\n\";\n}"
+  },
+  {
+    "id": "php-06",
+    "code": "<?php\nfunction isEven(int $n): bool\n{\n    return $n % 2 === 0;\n}"
+  },
+  {
+    "id": "php-07",
+    "code": "<?php\n$words = ['apple', 'banana', 'cherry'];\nforeach ($words as $word) {\n    echo strtoupper($word) . \"\\n\";\n}"
+  },
+  {
+    "id": "php-08",
+    "code": "<?php\nfunction factorial(int $n): int\n{\n    if ($n <= 1) {\n        return 1;\n    }\n    return $n * factorial($n - 1);\n}"
+  },
+  {
+    "id": "php-09",
+    "code": "<?php\n$count = 3;\nwhile ($count > 0) {\n    echo $count . \"\\n\";\n    $count--;\n}"
+  },
+  {
+    "id": "php-10",
+    "code": "<?php\ntry {\n    $value = intdiv(10, 0);\n} catch (DivisionByZeroError $e) {\n    echo 'Cannot divide by zero';\n}"
+  },
+  {
+    "id": "php-11",
+    "code": "<?php\n// Read a value from the query string\n$page = $_GET['page'] ?? 1;\n$page = max(1, (int) $page);\necho \"Page $page\";"
+  },
+  {
+    "id": "php-12",
+    "code": "<?php\n$scores = ['ana' => 90, 'ben' => 85];\narsort($scores);\n$best = array_key_first($scores);\necho $best;"
+  },
+  {
+    "id": "php-13",
+    "code": "<?php\nclass Point\n{\n    public function __construct(\n        public int $x,\n        public int $y\n    ) {}\n}"
+  },
+  {
+    "id": "php-14",
+    "code": "<?php\n$text = 'The quick brown fox';\n$length = strlen($text);\n$words = explode(' ', $text);\necho \"$length characters, \" . count($words) . \" words\";"
+  },
+  {
+    "id": "php-15",
+    "code": "<?php\nif (isset($_POST['email']) && $_POST['email'] !== '') {\n    $email = trim($_POST['email']);\n    echo htmlspecialchars($email);\n}"
+  }
+]
