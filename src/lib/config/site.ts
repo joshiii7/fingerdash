@@ -1,6 +1,12 @@
 /** The author's GitHub profile. Every general "GitHub" link on the site points here. */
 export const GITHUB_PROFILE_URL = 'https://github.com/joshiii7';
 
+/** The author's Codewars profile. */
+export const CODEWARS_URL = 'https://www.codewars.com/users/joshiii7';
+
+/** The author's CodePen profile. */
+export const CODEPEN_URL = 'https://codepen.io/joshiii7';
+
 /** WhatsApp chat with the author (a wa.me link, so it opens WhatsApp or WhatsApp Web). */
 export const WHATSAPP_URL = 'https://wa.me/639382943739';
 
@@ -32,8 +38,11 @@ export const THEME_COLOR = '#0d1117';
 /** The author's name, used in <meta name="author">, the About page, and structured data. */
 export const AUTHOR_NAME = 'Joshi Angelo Z. Adlawan';
 
-/** TODO: the public portfolio URL. Leave empty to hide the portfolio link on the About page. */
-export const PORTFOLIO_URL = '';
+/**
+ * The public portfolio URL. It is the author's name link in the footer, the Portfolio link on the
+ * About page, and the author's url in structured data. Leave empty to hide all three.
+ */
+export const PORTFOLIO_URL: string = 'https://joshiii7-portfolio.vercel.app/';
 
 /**
  * The public site URL, ending in "/". It is the GitHub Pages address; for a custom domain, set

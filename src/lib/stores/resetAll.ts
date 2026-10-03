@@ -3,6 +3,7 @@ import { results } from './results';
 import { tutorialProgress } from './tutorialProgress';
 import { showHands } from './showHands';
 import { introsSeen } from './introsSeen';
+import { gunSettings } from './gun';
 
 /** Every localStorage key Fingerdash writes starts with this prefix. */
 export const STORAGE_PREFIX = 'fingerdash:';
@@ -32,5 +33,6 @@ export function resetAllData(): void {
   tutorialProgress.reset();
   introsSeen.reset();
   showHands.reset();
+  gunSettings.reset();
   clearFingerdashStorage();
 }

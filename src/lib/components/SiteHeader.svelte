@@ -163,9 +163,6 @@
 
     a.active {
       color: var(--color-accent);
-      // Underline as well as color, so the current page isn't shown by color alone.
-      text-decoration: underline;
-      text-underline-offset: 0.35em;
     }
   }
 

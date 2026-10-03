@@ -5,10 +5,11 @@
   import ResultsScreen from '../components/ResultsScreen.svelte';
   import ModeSelector from '../components/ModeSelector.svelte';
   import CustomTextDialog from '../components/CustomTextDialog.svelte';
-  import PageBanner from '../components/PageBanner.svelte';
+  import GunHud from '../components/GunHud.svelte';
   import PageContainer from '../components/PageContainer.svelte';
   import { createTypingSession } from '../engine/useTypingSession';
   import { bindSessionToOverlays } from '../palette/bindOverlays';
+  import { gun } from '../gun/gunController';
   import { customDialogRequest, overlayOpen } from '../stores/palette';
   import {
     challengeFromWords,
@@ -152,7 +153,10 @@
   }
 
   const initial: Prepared = prepareLocal() ?? { challenge: EMPTY_CHALLENGE, meta: NO_META };
-  const session = createTypingSession(initial.challenge, { onFinish: handleFinish });
+  const session = createTypingSession(initial.challenge, {
+    onFinish: handleFinish,
+    onKeystroke: gun.onKeystroke,
+  });
   const snapshot = session.snapshot;
 
   let runMeta = $state<RunMeta>(initial.meta);
@@ -169,6 +173,7 @@
   let lastSignature = signatureOf($settings);
 
   let dialogOpen = $state(false);
+  let typingWrap: HTMLDivElement | undefined = $state();
   let dialogOpener: HTMLElement | null = null;
 
   function handleFinish(engine: TypingEngine) {
@@ -359,14 +364,13 @@
   const isCode = $derived($settings.mode === 'code');
 </script>
 
-<PageBanner
-  title="Typing test"
-  lead="Pick time, words, quote, custom text, or code, and see your speed, accuracy, and consistency."
-/>
-
 <PageContainer>
+  <h1 class="visually-hidden">Typing test</h1>
   <div class="test-view">
-    <ModeSelector onAnnounce={handleModeChange} onEditCustom={openDialog} />
+    <div class="test-top">
+      <ModeSelector onAnnounce={handleModeChange} onEditCustom={openDialog} />
+      <GunHud effectTarget={() => typingWrap} />
+    </div>
 
     <p class="visually-hidden" role="status" aria-live="polite">{announcement}</p>
 
@@ -388,30 +392,32 @@
         {/if}
       </div>
 
-      {#if loadError}
-        <p class="load-error" role="alert">{loadError}</p>
-      {:else if loading}
-        <p class="loading" role="status">Loading code snippets...</p>
-      {:else}
-        <div class="typing-wrap">
-          <TypingArea
-            words={$snapshot.words}
-            wordIndex={$snapshot.wordIndex}
-            charIndexInWord={$snapshot.charIndexInWord}
-            status={$snapshot.status}
-            kind={$snapshot.kind}
-            showMistakes={$settings.showMistakes}
-          />
-        </div>
-      {/if}
-
-      <p class="hint">
-        {#if isCode}
-          Enter for a new line, Esc to restart
+      <div class="test-center">
+        {#if loadError}
+          <p class="load-error" role="alert">{loadError}</p>
+        {:else if loading}
+          <p class="loading" role="status">Loading code snippets...</p>
         {:else}
-          Tab or Esc to restart
+          <div class="typing-wrap" bind:this={typingWrap}>
+            <TypingArea
+              words={$snapshot.words}
+              wordIndex={$snapshot.wordIndex}
+              charIndexInWord={$snapshot.charIndexInWord}
+              status={$snapshot.status}
+              kind={$snapshot.kind}
+              showMistakes={$settings.showMistakes}
+            />
+          </div>
         {/if}
-      </p>
+
+        <p class="hint">
+          {#if isCode}
+            Enter for a new line, Esc to restart
+          {:else}
+            Tab or Esc to restart
+          {/if}
+        </p>
+      </div>
     {/if}
   </div>
 </PageContainer>
@@ -427,13 +433,34 @@
 <style lang="scss">
   @use '../../styles/variables' as *;
 
+  // Fills the space between the header and footer. The leftover height is split three ways by
+  // auto margins: above the settings, between the timer and the text, and below the text.
   .test-view {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: $space-6;
     padding-block: $space-8;
     width: 100%;
+  }
+
+  .test-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-3;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .test-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-6;
+    width: 100%;
+    margin-block: auto;
   }
 
   .typing-wrap {

@@ -1,4 +1,4 @@
-import { describe, it, expect, afterEach } from 'vitest';
+import { describe, it, expect, afterEach, vi } from 'vitest';
 import { get } from 'svelte/store';
 import { createTypingSession, type TypingSession } from './useTypingSession';
 import { generateQuoteChallenge } from './challenge';
@@ -65,5 +65,59 @@ describe('typing session key handling', () => {
     type('ca');
     press('Backspace', { metaKey: true });
     expect(s.engine.getSnapshot().charIndexInWord).toBe(2);
+  });
+});
+
+describe('typing session keystroke reports', () => {
+  function startWith(text: string) {
+    const onKeystroke = vi.fn();
+    session = createTypingSession(generateQuoteChallenge(text), { onKeystroke });
+    session.start();
+    return onKeystroke;
+  }
+
+  it('reports a correct character as a hit and a wrong one as a miss', () => {
+    const onKeystroke = startWith('cat dog');
+    press('c');
+    press('x');
+    expect(onKeystroke.mock.calls).toEqual([['hit'], ['miss']]);
+  });
+
+  it('reports a space that moves to the next word, and ignores one that does not', () => {
+    const onKeystroke = startWith('cat dog');
+    press(' '); // nothing typed yet, so the space is ignored
+    expect(onKeystroke).not.toHaveBeenCalled();
+    type('cat');
+    onKeystroke.mockClear();
+    press(' ');
+    expect(onKeystroke).toHaveBeenCalledWith('hit');
+    onKeystroke.mockClear();
+    press(' '); // a second space with nothing typed in the new word
+    expect(onKeystroke).not.toHaveBeenCalled();
+  });
+
+  it('stays quiet for Backspace, Shift, Tab, arrows, F-keys and shortcuts', () => {
+    const onKeystroke = startWith('cat dog');
+    type('ca');
+    onKeystroke.mockClear();
+    for (const key of ['Backspace', 'Shift', 'Tab', 'ArrowLeft', 'F5', 'Control', 'Alt']) {
+      press(key);
+    }
+    press('a', { ctrlKey: true });
+    expect(onKeystroke).not.toHaveBeenCalled();
+  });
+
+  it('does not change typing results when a listener is attached', () => {
+    const onKeystroke = startWith('cat dog');
+    type('cax');
+    const withListener = session!.engine.getSnapshot();
+    session?.destroy();
+    session = createTypingSession(generateQuoteChallenge('cat dog'));
+    session.start();
+    type('cax');
+    const without = session.engine.getSnapshot();
+    expect(onKeystroke).toHaveBeenCalledTimes(3);
+    expect(withListener.charIndexInWord).toBe(without.charIndexInWord);
+    expect(withListener.wordIndex).toBe(without.wordIndex);
   });
 });

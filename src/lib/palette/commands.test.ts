@@ -108,3 +108,29 @@ describe('test commands', () => {
     }
   });
 });
+
+describe('Gun Mode commands', () => {
+  const commands = buildCommands();
+
+  it('has a command for toggling, muting, volume, and each weapon', () => {
+    const ids = commands.filter((c) => c.kind === 'gun').map((c) => c.id);
+    expect(ids).toEqual(
+      expect.arrayContaining([
+        'gun-toggle',
+        'gun-mute',
+        'gun-volume-up',
+        'gun-volume-down',
+        'gun-weapon-rakrak',
+        'gun-weapon-smg',
+        'gun-weapon-shotgun',
+        'gun-weapon-pistol',
+        'gun-weapon-revolver',
+      ]),
+    );
+  });
+
+  it('is found by searching for "gun" or "volume"', () => {
+    expect(filterCommands(commands, 'gun').length).toBeGreaterThanOrEqual(8);
+    expect(filterCommands(commands, 'gun volume').map((c) => c.id)).toContain('gun-volume-up');
+  });
+});

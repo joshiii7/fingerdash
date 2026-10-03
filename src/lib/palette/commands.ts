@@ -9,6 +9,8 @@ import {
 } from '../stores/settings';
 import { CODE_LANGUAGES } from '../../data/code';
 import { QUOTE_LENGTH_OPTIONS } from '../../data/quotes';
+import { WEAPONS, type WeaponId } from '../gun/weapons';
+import type { GunAction } from '../gun/gunController';
 
 interface BaseCommand {
   id: string;
@@ -23,7 +25,9 @@ export type Command =
   | (BaseCommand & { kind: 'setting'; patch: Partial<Settings>; announce: string })
   | (BaseCommand & { kind: 'action'; action: 'edit-custom-text' })
   /** Opens the tutorial and reopens the explanation for the lesson you are on. */
-  | (BaseCommand & { kind: 'lesson-why' });
+  | (BaseCommand & { kind: 'lesson-why' })
+  /** Gun Mode controls: the keyboard route to the volume and weapon, since Tab restarts the test. */
+  | (BaseCommand & { kind: 'gun'; action: GunAction; weapon?: WeaponId });
 
 const NAVIGATE_ROUTES: Route[] = ['test', 'tutorial', 'about', 'accessibility', 'privacy', 'home'];
 
@@ -159,6 +163,32 @@ function tutorialCommands(): Command[] {
   ];
 }
 
+function gunCommands(): Command[] {
+  const gun = (
+    id: string,
+    label: string,
+    action: GunAction,
+    keywords: string[],
+    weapon?: WeaponId,
+  ): Command => ({
+    id: `gun-${id}`,
+    kind: 'gun',
+    label,
+    action,
+    weapon,
+    keywords: ['gun', 'mode', 'game', 'shoot', ...keywords],
+  });
+  return [
+    gun('toggle', 'Gun Mode: toggle', 'toggle', ['on', 'off', 'enable', 'disable']),
+    gun('mute', 'Gun Mode: mute or unmute sounds', 'mute', ['sound', 'audio', 'silence']),
+    gun('volume-up', 'Gun Mode: volume up', 'volume-up', ['sound', 'audio', 'louder']),
+    gun('volume-down', 'Gun Mode: volume down', 'volume-down', ['sound', 'audio', 'quieter']),
+    ...WEAPONS.map((w) =>
+      gun(`weapon-${w.id}`, `Gun Mode: weapon ${w.label}`, 'weapon', ['weapon', w.id], w.id),
+    ),
+  ];
+}
+
 function pageCommands(): Command[] {
   return NAVIGATE_ROUTES.map((route) => ({
     id: `go-${route}`,
@@ -170,7 +200,13 @@ function pageCommands(): Command[] {
 }
 
 export function buildCommands(): Command[] {
-  return [...themeCommands(), ...testCommands(), ...tutorialCommands(), ...pageCommands()];
+  return [
+    ...themeCommands(),
+    ...testCommands(),
+    ...gunCommands(),
+    ...tutorialCommands(),
+    ...pageCommands(),
+  ];
 }
 
 /** Every whitespace-separated word in the query must appear in the label or keywords. */

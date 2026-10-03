@@ -6,6 +6,11 @@ import { isTextEntryTarget } from '../palette/openRules';
 export interface TypingSessionOptions {
   pollIntervalMs?: number;
   onFinish?: (engine: TypingEngine) => void;
+  /**
+   * Called for each key that typed a character (right or wrong) or moved to the next word.
+   * Never for Backspace or keys the engine ignores. Used by Gun Mode for its sounds.
+   */
+  onKeystroke?: (result: 'hit' | 'miss') => void;
 }
 
 export interface TypingSession {
@@ -80,6 +85,16 @@ export function createTypingSession(
     }
   }
 
+  /** Tells the caller what the key just did. Reads two counters, so it adds no measurable work. */
+  function reportKeystroke(typedBefore: number, wordBefore: number) {
+    const typed = engine.getKeystrokes();
+    if (typed.length > typedBefore) {
+      options.onKeystroke?.(typed[typed.length - 1].correct ? 'hit' : 'miss');
+    } else if (engine.getWordIndex() > wordBefore) {
+      options.onKeystroke?.('hit');
+    }
+  }
+
   function onKeydown(event: KeyboardEvent) {
     // Ctrl+Backspace (Option+Backspace on a Mac) deletes a whole word, so it is the one
     // modified key the session handles. Every other shortcut belongs to the browser.
@@ -91,8 +106,12 @@ export function createTypingSession(
     if (KEYS_THAT_SCROLL.has(event.key) && !controlNeedsKey) event.preventDefault();
 
     const wasFinished = engine.isFinished();
+    const typedBefore = engine.getKeystrokes().length;
+    const wordBefore = engine.getWordIndex();
     const consumed = engine.handleKey(event.key, performance.now(), wordDelete);
     if (consumed) event.preventDefault();
+    if (consumed && options.onKeystroke && event.key !== 'Backspace')
+      reportKeystroke(typedBefore, wordBefore);
 
     if (!wasFinished && engine.isFinished()) {
       pushSnapshot();

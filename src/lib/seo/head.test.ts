@@ -295,10 +295,10 @@ describe('validateHeads', () => {
 });
 
 describe('unfilledPlaceholders', () => {
-  it('reports the portfolio and site URL until they are set, but not the filled-in author', () => {
+  it('reports the site URL until it is set, but not the filled-in author and portfolio', () => {
     const list = unfilledPlaceholders('https://TODO-set-site-url.example/fingerdash/');
     expect(list.join(' ')).not.toContain('AUTHOR_NAME');
-    expect(list.join(' ')).toContain('PORTFOLIO_URL');
+    expect(list.join(' ')).not.toContain('PORTFOLIO_URL');
     expect(list.join(' ')).toContain('site URL');
   });
 

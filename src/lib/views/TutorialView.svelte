@@ -3,7 +3,6 @@
   import TypingArea from '../components/TypingArea.svelte';
   import Keyboard from '../components/Keyboard.svelte';
   import HandsGuide from '../components/HandsGuide.svelte';
-  import PageBanner from '../components/PageBanner.svelte';
   import PageContainer from '../components/PageContainer.svelte';
   import ResultsScreen from '../components/ResultsScreen.svelte';
   import LessonIntro from '../components/LessonIntro.svelte';
@@ -47,6 +46,32 @@
   let passed = $state(false);
   let wpmSamples = $state<WpmSample[]>([]);
   let lastSampledSecond = -1;
+
+  // Sidebar section headings are one word each (nav-labels).
+  const GROUP_LABELS: Record<string, string> = {
+    basics: 'Basics',
+    'home-row': 'Home',
+    'top-row': 'Top',
+    'bottom-row': 'Bottom',
+    numbers: 'Numbers',
+    punctuation: 'Punctuation',
+    practice: 'Practice',
+  };
+
+  const lessonGroups = lessons.reduce<{ group: string; label: string; items: Lesson[] }[]>(
+    (groups, lesson) => {
+      const existing = groups.find((g) => g.group === lesson.group);
+      if (existing) existing.items.push(lesson);
+      else
+        groups.push({
+          group: lesson.group,
+          label: GROUP_LABELS[lesson.group] ?? lesson.group,
+          items: [lesson],
+        });
+      return groups;
+    },
+    [],
+  );
 
   function handleFinish(engine: TypingEngine) {
     const stats = engine.getFinalStats();
@@ -162,6 +187,18 @@
     return snap.wordIndex < snap.words.length - 1 ? ' ' : null;
   }
 
+  /**
+   * Shorten lesson titles for sidebar nav (1-3 words).
+   * Removes prefixes like "Finger Zones:" and keeps the descriptive part.
+   */
+  function getSidebarLabel(title: string): string {
+    // Remove common prefixes to shorten titles
+    const cleanedTitle = title
+      .replace(/^(?:Home Row|Top Row|Bottom Row|Numbers|Punctuation|Finger Zones):\s*/i, '')
+      .trim();
+    return cleanedTitle || title;
+  }
+
   onMount(() => {
     session.start();
     activeSession.set(session);
@@ -196,36 +233,37 @@
   });
 </script>
 
-<PageBanner
-  title="Tutorial"
-  lead="Learn each key one row at a time, with the right finger shown for every character."
-/>
-
 <PageContainer>
+  <h1 class="visually-hidden">Tutorial</h1>
   <div class="tutorial-view">
     <aside class="lesson-list" aria-label="Lessons" bind:this={lessonList}>
-      {#each lessons as lesson (lesson.id)}
-        {@const progress = $tutorialProgress.lessons[lesson.id]}
-        <button
-          type="button"
-          class="lesson-item"
-          class:active={lesson.id === selectedLesson.id}
-          class:completed={progress?.completed}
-          onclick={() => startLesson(lesson)}
-        >
-          <span class="lesson-text">
-            <span class="title">{lesson.title}</span>
-            <span class="summary">{lesson.summary}</span>
-          </span>
-          {#if progress && lesson.kind !== 'reading'}
-            <span class="score"
-              >{Math.round(progress.bestWpm)} wpm · {Math.round(progress.bestAccuracy)}%</span
+      {#each lessonGroups as { group, label, items } (group)}
+        <div class="lesson-group">
+          <h3 class="group-heading">{label}</h3>
+          {#each items as lesson (lesson.id)}
+            {@const progress = $tutorialProgress.lessons[lesson.id]}
+            <button
+              type="button"
+              class="lesson-item"
+              class:active={lesson.id === selectedLesson.id}
+              class:completed={progress?.completed}
+              aria-current={lesson.id === selectedLesson.id ? 'true' : undefined}
+              onclick={() => startLesson(lesson)}
             >
-          {/if}
-          {#if progress?.completed}
-            <span class="check" aria-label="Completed">✓</span>
-          {/if}
-        </button>
+              <span class="title nav-label" title={lesson.title}
+                >{getSidebarLabel(lesson.title)}</span
+              >
+              {#if progress && lesson.kind !== 'reading'}
+                <span class="score"
+                  >{Math.round(progress.bestWpm)} wpm · {Math.round(progress.bestAccuracy)}%</span
+                >
+              {/if}
+              {#if progress?.completed}
+                <span class="check" aria-label="Completed">✓</span>
+              {/if}
+            </button>
+          {/each}
+        </div>
       {/each}
     </aside>
 
@@ -339,12 +377,12 @@
     }
   }
 
-  // Wide screens: a column that stays beside the lesson and scrolls on its own, so all 26
-  // lessons are reachable without scrolling the whole page.
+  // Wide screens: a column that stays beside the lesson and scrolls on its own, so all the
+  // lessons are reachable without scrolling the whole page. Sections are always open, split
+  // by thin dividers, like the lesson sidebar on Syntaxia.
   .lesson-list {
     display: flex;
     flex-direction: column;
-    gap: $space-1;
     position: sticky;
     top: 5.5rem;
     align-self: start;
@@ -354,58 +392,82 @@
     padding-right: $space-1;
     scrollbar-width: thin;
 
-    // Tablet/phone: a scrollable strip so the lesson itself stays near the top.
+    // Tablet/phone: the lesson itself stays near the top, so the list becomes a short scroller.
     @include respond-below($breakpoint-md) {
-      flex-direction: row;
       position: static;
-      max-height: none;
-      overflow-y: visible;
-      overflow-x: auto;
-      padding-right: 0;
-      padding-bottom: $space-2;
-      scroll-snap-type: x proximity;
+      max-height: 16rem;
     }
   }
 
+  .lesson-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-block: 2px 4px;
+
+    & + & {
+      margin-top: 10px;
+      padding-top: 18px;
+      border-top: 1px solid var(--color-border);
+    }
+  }
+
+  .group-heading {
+    margin: 0 0 $space-1;
+    padding-inline: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
   .lesson-item {
-    @include card;
+    position: relative;
     display: flex;
     align-items: center;
     gap: $space-2;
-    padding: $space-2 $space-3;
+    padding: 7px 6px 7px $space-3;
+    border: none;
+    border-radius: $radius-sm;
+    background: transparent;
+    color: var(--color-text);
+    font: inherit;
     text-align: left;
-    background: var(--color-surface);
-    color: var(--color-text-muted);
     cursor: pointer;
     @include touch-target;
 
-    @include respond-below($breakpoint-md) {
-      flex: none;
-      white-space: nowrap;
-      scroll-snap-align: start;
+    &:hover {
+      background: color-mix(in srgb, var(--color-accent) 8%, transparent);
     }
 
-    .lesson-text {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      min-width: 0;
+    // The current lesson: accent text, a bar on the left edge and a soft tint.
+    &.active {
+      background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 6px auto 6px 0;
+        width: 3px;
+        border-radius: 2px;
+        background: var(--color-accent);
+      }
+
+      .title {
+        font-weight: 700;
+        color: var(--color-accent);
+      }
     }
 
     .title {
-      font-size: 0.9rem;
-    }
-
-    // One line on what you'll learn and why. Hidden in the phone strip, where items are short.
-    .summary {
-      font-size: 0.75rem;
-      line-height: 1.4;
-      color: var(--color-text-muted);
-
-      @include respond-below($breakpoint-md) {
-        display: none;
-      }
+      flex: 1;
+      min-width: 0;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .score {
@@ -417,15 +479,6 @@
 
     .check {
       color: var(--color-correct);
-    }
-
-    &.active {
-      border-color: var(--color-accent);
-      color: var(--color-text);
-    }
-
-    &.completed .title {
-      color: var(--color-text);
     }
   }
 
