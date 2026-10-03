@@ -72,7 +72,7 @@
   //
   // It is pinned to the corner of the browser window. Its only positioning is
   // fixed + the viewport edges below; nothing here depends on the content container
-  // or the footer. The footer leaves room for it instead (see SiteFooter).
+  // or the footer. The footer keeps its bottom-right links clear of it instead (see SiteFooter).
   .back-to-top {
     --edge: #{$space-4};
 
