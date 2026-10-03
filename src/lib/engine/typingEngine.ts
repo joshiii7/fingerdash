@@ -401,6 +401,11 @@ export class TypingEngine {
     return calculateStats(this.keystrokes, this.charCounts, start, end);
   }
 
+  /** Index of the word being typed. A cheap read, unlike a full snapshot. */
+  getWordIndex(): number {
+    return this.wordIndex;
+  }
+
   getKeystrokes(): readonly Keystroke[] {
     return this.keystrokes;
   }

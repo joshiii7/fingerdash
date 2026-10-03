@@ -25,7 +25,9 @@
     | 'speaker'
     | 'alert'
     | 'message'
-    | 'chevron';
+    | 'chevron'
+    | 'crosshair'
+    | 'speaker-off';
 
   // 24x24 outline paths, drawn for Fingerdash. Stroked, so they take the surrounding text color.
   const PATHS: Record<IconName, string> = {
@@ -62,6 +64,8 @@
     alert: 'M12 3l10 18H2zM12 10v5M12 18h.01',
     message: 'M4 4h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H9l-5 4V5a1 1 0 0 1 1-1z',
     chevron: 'M6 9l6 6 6-6',
+    crosshair: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 1v6M12 17v6M1 12h6M17 12h6',
+    'speaker-off': 'M4 9v6h4l5 4V5L8 9zM17 9l5 6M22 9l-5 6',
   };
 </script>
 

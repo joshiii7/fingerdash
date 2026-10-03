@@ -12,6 +12,7 @@
   import { router, ROUTE_LABELS } from '../router/router';
   import { buildCommands, filterCommands, type Command } from '../palette/commands';
   import { isPaletteShortcut } from '../palette/openRules';
+  import { runGunAction } from '../gun/gunController';
 
   const commands = buildCommands();
 
@@ -94,6 +95,10 @@
       await tick();
       router.navigate('tutorial');
       lessonWhyRequest.set(true);
+    } else if (command.kind === 'gun') {
+      // Gun Mode controls act in place; they don't change page.
+      liveMessage = runGunAction(command.action, command.weapon);
+      close(true);
     } else {
       // Test settings and actions: apply them, then show the test page. Focus only
       // goes back to the old element if we were already on the test page.
