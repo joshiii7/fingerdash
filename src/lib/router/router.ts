@@ -9,23 +9,17 @@ export const ROUTE_LABELS = Object.fromEntries(PAGES.map((p) => [p.route, p.labe
   string
 >;
 
-/** The site's base path, "/" or "/fingerdash/" on GitHub Pages. Always ends in a slash. */
-function siteBase(): string {
-  return import.meta.env.BASE_URL.replace(/\/*$/, '/');
-}
-
-/** The URL path of a page under the base path, e.g. /fingerdash/about/. */
-export function hrefFor(route: Route, base = siteBase()): string {
-  return `${base}${pageForRoute(route).path}`;
+/** The URL path of a page, e.g. /about/. The site is served from the domain root. */
+export function hrefFor(route: Route): string {
+  return `/${pageForRoute(route).path}`;
 }
 
 /**
- * Which page a URL path belongs to. Unknown paths fall back to home (the static
- * 404 page also redirects there). Tolerates a missing trailing slash and index.html.
+ * Which page a URL path belongs to. Unknown paths fall back to home.
+ * Tolerates a missing trailing slash and index.html.
  */
-export function routeFromPath(pathname: string, base = siteBase()): Route {
-  const withoutBase = pathname.startsWith(base) ? pathname.slice(base.length) : pathname;
-  const cleaned = withoutBase
+export function routeFromPath(pathname: string): Route {
+  const cleaned = pathname
     .replace(/^\/+/, '')
     .replace(/index\.html$/, '')
     .replace(/\/+$/, '');
@@ -43,7 +37,6 @@ export function legacyHashRoute(hash: string): Route | null {
 export function isInternalNavigation(
   anchor: Pick<HTMLAnchorElement, 'href' | 'target' | 'hasAttribute'>,
   origin: string,
-  base = siteBase(),
 ): Route | null {
   if (anchor.hasAttribute('download')) return null;
   if (anchor.target && anchor.target !== '_self') return null;
@@ -54,10 +47,9 @@ export function isInternalNavigation(
     return null;
   }
   if (url.origin !== origin) return null;
-  if (!url.pathname.startsWith(base)) return null;
-  const route = routeFromPath(url.pathname, base);
+  const route = routeFromPath(url.pathname);
   // Only exact page URLs count; anything else (an asset, a typo) loads normally.
-  return hrefFor(route, base) === url.pathname ? route : null;
+  return hrefFor(route) === url.pathname ? route : null;
 }
 
 function createRouter() {

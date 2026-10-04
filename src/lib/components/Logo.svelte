@@ -1,5 +1,5 @@
 <script lang="ts">
-  // Built by Vite, so it is fingerprinted and sits under the GitHub Pages base path.
+  // Built by Vite, so its URL is fingerprinted.
   import { imageSet } from '../config/images';
   import { hrefFor } from '../router/router';
 

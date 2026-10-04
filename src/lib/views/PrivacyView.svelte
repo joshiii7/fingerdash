@@ -45,9 +45,9 @@
     <li>No requests to third-party services while you use the site</li>
   </ul>
   <p>
-    Fingerdash is served by GitHub Pages, so GitHub receives the ordinary request data any web host
-    sees (such as your IP address) when your browser loads the page. Fingerdash itself doesn't
-    collect or add to that.
+    Fingerdash is hosted on Vercel, so Vercel receives the ordinary request data any web host sees
+    (such as your IP address) when your browser loads the page. Fingerdash itself doesn't collect or
+    add to that.
   </p>
 
   <h2>Clear your data</h2>

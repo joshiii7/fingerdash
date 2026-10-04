@@ -1,5 +1,5 @@
 /**
- * Build-time prerendering for a static host that can't rewrite URLs (GitHub Pages).
+ * Build-time prerendering for a static host that serves one file per URL.
  *
  * The app is a single-page app, so `vite build` produces one index.html. After
  * the build this plugin writes a copy for every page (dist/about/index.html and
@@ -47,9 +47,9 @@ function extractHead(html: string): string {
   return html.slice(start, end + SEO_END.length);
 }
 
-/** Finds the page for a request path such as /fingerdash/about/, given the site base. */
-function pageForRequest(path: string, base: string): PageConfig {
-  const relative = path.split('?')[0].replace(base, '').replace(/^\/+/, '');
+/** Finds the page for a request path such as /about/. */
+function pageForRequest(path: string): PageConfig {
+  const relative = path.split('?')[0].replace(/^\/+/, '');
   return PAGES.find((p) => p.path !== '' && relative.startsWith(p.path)) ?? PAGES[0];
 }
 
@@ -72,7 +72,7 @@ export function prerender(options: PrerenderOptions = {}): Plugin {
 
     transformIndexHtml(html, context) {
       const request = context.originalUrl ?? context.path;
-      const page = config.command === 'serve' ? pageForRequest(request, config.base) : PAGES[0];
+      const page = config.command === 'serve' ? pageForRequest(request) : PAGES[0];
       return injectNoscript(injectHead(html, page, seo()), page);
     },
 
@@ -107,7 +107,7 @@ export function prerender(options: PrerenderOptions = {}): Plugin {
       const lastmod = new Date().toISOString().slice(0, 10);
       writeFileSync(join(outDir, 'sitemap.xml'), buildSitemap(ctx, lastmod));
       writeFileSync(join(outDir, 'robots.txt'), buildRobots(ctx));
-      writeFileSync(join(outDir, '404.html'), build404(config.base));
+      writeFileSync(join(outDir, '404.html'), build404());
 
       config.logger.info(
         `prerender: wrote ${PAGES.length} pages, sitemap.xml, robots.txt, and 404.html for ${ctx.siteUrl}`,

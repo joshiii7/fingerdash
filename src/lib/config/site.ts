@@ -45,10 +45,11 @@ export const AUTHOR_NAME = 'Joshi Angelo Z. Adlawan';
 export const PORTFOLIO_URL: string = 'https://joshiii7-portfolio.vercel.app/';
 
 /**
- * The public site URL, ending in "/". It is the GitHub Pages address; for a custom domain, set
- * the SITE_URL environment variable at build time instead of editing code.
+ * The public site URL, ending in "/". Canonicals, Open Graph tags, JSON-LD, the sitemap, and
+ * robots.txt are all built from it. To build for a different domain, set the SITE_URL environment
+ * variable at build time instead of editing code.
  */
-export const DEFAULT_SITE_URL = 'https://joshiii7.github.io/fingerdash/';
+export const DEFAULT_SITE_URL = 'https://fingerdash.vercel.app/';
 
 /** Which placeholders above are still unfilled, for the build-time warning. */
 export function unfilledPlaceholders(siteUrl: string): string[] {

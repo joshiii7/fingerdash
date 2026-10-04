@@ -2,7 +2,7 @@ import manifest from '../../assets/images.json';
 
 /**
  * Every image the site serves comes from `src/assets/` through Vite, so its URL is hashed and
- * sits under the base path (`/fingerdash/` on GitHub Pages). Nothing here is a hard-coded path.
+ * is served from the site root. Nothing here is a hard-coded path.
  * The files and their real sizes come from `npm run images`, recorded in `images.json`.
  */
 const urls = import.meta.glob('../../assets/**/*.webp', {
