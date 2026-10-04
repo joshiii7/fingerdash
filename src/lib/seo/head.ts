@@ -15,7 +15,7 @@ import {
 import { FAQ_ITEMS } from '../../data/faq.ts';
 
 export interface SeoContext {
-  /** Absolute site URL ending in "/", for example https://user.github.io/fingerdash/. */
+  /** Absolute site URL ending in "/", for example https://fingerdash.vercel.app/. */
   siteUrl: string;
   /** Social preview image, relative to the site root. */
   ogImagePath: string;
@@ -178,23 +178,21 @@ export function buildRobots(ctx: SeoContext): string {
   return `User-agent: *\nAllow: /\n\nSitemap: ${absoluteUrl(ctx.siteUrl, 'sitemap.xml')}\n`;
 }
 
-/** A static 404 that sends any unknown URL back to the home page. `base` is the site's base path. */
-export function build404(base: string): string {
-  const home = base.replace(/\/*$/, '/');
+/** A static 404 page for unknown URLs, with a link back to the home page. The host serves it with a 404 status. */
+export function build404(): string {
   return `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <meta http-equiv="refresh" content="0; url=${home}" />
     <title>Page not found | ${SITE_NAME}</title>
-    <script>
-      location.replace(${JSON.stringify(home)});
-    </script>
   </head>
   <body>
-    <p>That page doesn't exist. <a href="${home}">Go to the ${SITE_NAME} home page</a>.</p>
+    <main>
+      <h1>Page not found</h1>
+      <p>That page doesn't exist. <a href="/">Go to the ${SITE_NAME} home page</a>.</p>
+    </main>
   </body>
 </html>
 `;

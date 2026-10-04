@@ -118,7 +118,7 @@
     {
       icon: 'branch',
       title: 'Open by design',
-      body: 'The source is public. Built with Svelte, TypeScript, and SCSS and hosted on GitHub Pages, it is easy to read, run yourself, or change.',
+      body: 'The source is public. Built with Svelte, TypeScript, and SCSS and hosted on Vercel, it is easy to read, run yourself, or change.',
     },
   ];
 </script>

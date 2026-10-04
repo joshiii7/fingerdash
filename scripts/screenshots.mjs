@@ -2,7 +2,7 @@
 //
 //   npm run screenshots
 //
-// It builds the site, serves the build with `vite preview` under the base path, drives it in
+// It builds the site, serves the build with `vite preview`, drives it in
 // Chromium the way a person would (settings through localStorage, then real keystrokes), saves
 // the originals to `assets-src/screenshots/`, and shuts down. Then it runs the image script, which
 // turns them into the optimized WebP files. Nothing here adds hooks to the site itself.

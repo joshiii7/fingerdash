@@ -36,10 +36,10 @@ npm run check     # svelte-check + TypeScript
 - **`src/lib/views/`** — `TestView` and `TutorialView` each own a `TypingSession` and translate user settings / lesson data into `Challenge`s, but reuse the same engine, renderer, and results UI.
 - **`src/lib/stores/`** — `localStorage`-backed Svelte stores for settings, test personal bests, and tutorial progress.
 - **`src/data/`** — JSON content: word lists, quotes, and lesson definitions (one file per key-row group, aggregated in `src/data/lessons/index.ts`).
-- **Routing and SEO** — pages have real URLs (`/tutorial/`, `/about/`, ...). `src/lib/router/router.ts` is a small History API router that also turns ordinary link clicks into in-app navigation and migrates old `#/about` bookmarks. Every page is declared once in `src/lib/config/pages.ts` (URL, title, description, schema type). At build time `plugins/prerender.ts` writes a static `index.html` per page with its own `<head>` (title, description, canonical, Open Graph, Twitter, JSON-LD), plus `sitemap.xml`, `robots.txt`, and a `404.html` that redirects home, and fails the build if a page's head is wrong or two pages share a canonical. The page _body_ is still rendered in the browser. `src/lib/seo/head.ts` holds the pure, unit-tested builders.
+- **Routing and SEO** — pages have real URLs (`/tutorial/`, `/about/`, ...). `src/lib/router/router.ts` is a small History API router that also turns ordinary link clicks into in-app navigation and migrates old `#/about` bookmarks. Every page is declared once in `src/lib/config/pages.ts` (URL, title, description, schema type). At build time `plugins/prerender.ts` writes a static `index.html` per page with its own `<head>` (title, description, canonical, Open Graph, Twitter, JSON-LD), plus `sitemap.xml`, `robots.txt`, and a plain `404.html` page, and fails the build if a page's head is wrong or two pages share a canonical. The page _body_ is still rendered in the browser. `src/lib/seo/head.ts` holds the pure, unit-tested builders.
 - **Dialogs** — every modal (command palette, custom text, "Clear my data") uses `Modal.svelte`: backdrop press-and-release to close, Esc, focus trap and focus return, scroll lock, and a pause on the typing listener while open.
 
-- **Images** — every image is a `<picture>` (or a small `<img>` with explicit dimensions) built from `assets-src/` by `npm run images` into `src/assets/`, with a manifest (`src/assets/images.json`) that records the real file sizes. Components read it through `src/lib/config/images.ts`, so URLs come from Vite and follow the base path; nothing is hard-coded and no CSS `background-image` is used for content or banners. Banners and screenshots get a desktop `srcset` (1024 and 1584 wide, or 960 and 1440) plus a separate mobile file for `(max-width: 48rem)`. The mobile banners are cropped to the subject, not just shrunk.
+- **Images** — every image is a `<picture>` (or a small `<img>` with explicit dimensions) built from `assets-src/` by `npm run images` into `src/assets/`, with a manifest (`src/assets/images.json`) that records the real file sizes. Components read it through `src/lib/config/images.ts`, so URLs come from Vite; nothing is hard-coded and no CSS `background-image` is used for content or banners. Banners and screenshots get a desktop `srcset` (1024 and 1584 wide, or 960 and 1440) plus a separate mobile file for `(max-width: 48rem)`. The mobile banners are cropped to the subject, not just shrunk.
 - **Mistake labels** — the engine remembers the key typed at each wrong position (`RenderChar.typed`), and `TypingArea` draws it small above the character. The setting "Show typed mistakes" (on by default) is saved with the other settings and is in the command palette. Turning it off removes the labels and the extra line spacing.
 
 ## Images and screenshots
@@ -55,20 +55,19 @@ npm run screenshots   # build, serve, capture the Test and Tutorial pages, then 
 
 These are marked `TODO` and the build prints a warning listing any that are still unset:
 
-- **Site URL** (canonicals, Open Graph, sitemap): defaults to `https://joshiii7.github.io/fingerdash/` (`DEFAULT_SITE_URL` in `src/lib/config/site.ts`). For a custom domain, set the `SITE_URL` environment variable, or a `SITE_URL` repository _variable_ for the deploy workflow.
+- **Site URL** (canonicals, Open Graph, JSON-LD, sitemap, `robots.txt`): defaults to `https://fingerdash.vercel.app/` (`DEFAULT_SITE_URL` in `src/lib/config/site.ts`). To build for another domain, set the `SITE_URL` environment variable (in Vercel: Project Settings > Environment Variables).
 - **GitHub profile** (footer, About, structured data): `GITHUB_PROFILE_URL` in the same file. Author: [Joshi Angelo Z. Adlawan](https://github.com/joshiii7).
 - **Author name** (`<meta name="author">`, the About page, structured data): `AUTHOR_NAME` in `src/lib/config/site.ts`.
 - **Portfolio link** on the About page: `PORTFOLIO_URL` in the same file (leave empty to hide it).
 
-Note: search engines only read `robots.txt` at the root of a _domain_. On a GitHub _project_ page (`user.github.io/repo/`) the generated `robots.txt` and the sitemap are found through Search Console instead. The pages themselves are indexable either way.
-
 ## Deploying
 
-This repo includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that lints, tests, builds, and deploys to GitHub Pages on every push to `main`.
+Fingerdash is hosted on Vercel at https://fingerdash.vercel.app/, served from the domain root.
 
-To enable it on your fork/repo:
+1. In Vercel, choose **Add New > Project** and import this GitHub repo.
+2. Set the framework preset to **Vite**. The defaults are right: build command `npm run build`, output directory `dist`.
+3. Deploy. After that, every push to `main` goes to production and every other branch or pull request gets its own preview URL.
 
-1. Go to **Settings > Pages** and set **Source** to **GitHub Actions**.
-2. Push to `main` — the workflow will build and deploy automatically.
+`vercel.json` only sets `trailingSlash`, so `/about` redirects to `/about/` and matches the canonical URLs. It has no SPA rewrite on purpose: the build already writes a real `index.html` for every page, so deep links work, and unknown URLs get the real `404.html`.
 
-The Vite `base` path defaults to `/fingerdash/` (see `vite.config.ts`), matching `https://<username>.github.io/fingerdash/`. If you rename the repo or use a custom domain, override it by setting the `VITE_BASE_PATH` environment variable at build time (e.g. `VITE_BASE_PATH=/ npm run build` for a custom domain served from the root).
+The GitHub Actions workflow (`.github/workflows/ci.yml`) runs lint, tests, and a build on pushes to `main` and on pull requests. It doesn't deploy anything.

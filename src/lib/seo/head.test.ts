@@ -19,7 +19,7 @@ import {
 } from './head';
 
 const ctx: SeoContext = {
-  siteUrl: 'https://example.github.io/fingerdash/',
+  siteUrl: 'https://example.com/',
   ogImagePath: 'og-image.jpg',
   ogImageAlt: 'A dark keyboard with hands typing',
 };
@@ -88,9 +88,7 @@ describe('buildHead', () => {
   it('never shares a canonical between pages', () => {
     const canonicals = PAGES.map((p) => pageUrl(p, ctx));
     expect(new Set(canonicals).size).toBe(PAGES.length);
-    expect(canonicals.every((c) => c.startsWith('https://example.github.io/fingerdash/'))).toBe(
-      true,
-    );
+    expect(canonicals.every((c) => c.startsWith('https://example.com/'))).toBe(true);
   });
 
   it('includes the author, Open Graph, and Twitter tags on every page', () => {
@@ -111,7 +109,7 @@ describe('buildHead', () => {
       }
       expect(head).toContain('property="og:site_name" content="Fingerdash"');
       expect(head).toContain('name="twitter:card" content="summary_large_image"');
-      expect(head).toContain(`content="https://example.github.io/fingerdash/og-image.jpg"`);
+      expect(head).toContain(`content="https://example.com/og-image.jpg"`);
     }
   });
 
@@ -162,7 +160,7 @@ describe('JSON-LD', () => {
     expect(app.applicationCategory).toBe('EducationalApplication');
     expect(app.operatingSystem).toBe('Any');
     expect(app.offers).toMatchObject({ '@type': 'Offer', price: '0' });
-    expect(app.url).toBe('https://example.github.io/fingerdash/');
+    expect(app.url).toBe('https://example.com/');
   });
 
   it('gives inner pages a WebPage (AboutPage for About) and a BreadcrumbList', () => {
@@ -178,7 +176,7 @@ describe('JSON-LD', () => {
       itemListElement: { name: string; item: string; position: number }[];
     };
     expect(crumb.itemListElement.map((i) => i.name)).toEqual(['Home', 'Privacy']);
-    expect(crumb.itemListElement[1].item).toBe('https://example.github.io/fingerdash/privacy/');
+    expect(crumb.itemListElement[1].item).toBe('https://example.com/privacy/');
     expect(crumb.itemListElement.map((i) => i.position)).toEqual([1, 2]);
   });
 
@@ -236,7 +234,7 @@ describe('sitemap and robots', () => {
   it('lists every page with an absolute URL and a lastmod', () => {
     for (const page of PAGES) expect(sitemap).toContain(`<loc>${pageUrl(page, ctx)}</loc>`);
     expect(sitemap.match(/<lastmod>2026-09-19<\/lastmod>/g)).toHaveLength(PAGES.length);
-    expect(sitemap).toContain('<loc>https://example.github.io/fingerdash/</loc>');
+    expect(sitemap).toContain('<loc>https://example.com/</loc>');
     expect(sitemap.startsWith('<?xml version="1.0" encoding="UTF-8"?>')).toBe(true);
   });
 
@@ -244,22 +242,19 @@ describe('sitemap and robots', () => {
     const robots = buildRobots(ctx);
     expect(robots).toContain('User-agent: *');
     expect(robots).toContain('Allow: /');
-    expect(robots).toContain('Sitemap: https://example.github.io/fingerdash/sitemap.xml');
+    expect(robots).toContain('Sitemap: https://example.com/sitemap.xml');
     expect(robots).not.toContain('Disallow');
   });
 });
 
 describe('build404', () => {
-  it('sends visitors to the home page under the base path, with and without JavaScript', () => {
-    const html = build404('/fingerdash/');
-    expect(html).toContain('location.replace("/fingerdash/")');
-    expect(html).toContain('http-equiv="refresh" content="0; url=/fingerdash/"');
-    expect(html).toContain('href="/fingerdash/"');
+  it('is a real page with a link home, not a redirect', () => {
+    const html = build404();
+    expect(html).toContain('<h1>Page not found</h1>');
+    expect(html).toContain('href="/"');
     expect(html).toContain('noindex');
-  });
-
-  it('normalizes a base path without a trailing slash', () => {
-    expect(build404('/app')).toContain('location.replace("/app/")');
+    expect(html).not.toContain('http-equiv="refresh"');
+    expect(html).not.toContain('location.replace');
   });
 });
 
@@ -296,14 +291,14 @@ describe('validateHeads', () => {
 
 describe('unfilledPlaceholders', () => {
   it('reports the site URL until it is set, but not the filled-in author and portfolio', () => {
-    const list = unfilledPlaceholders('https://TODO-set-site-url.example/fingerdash/');
+    const list = unfilledPlaceholders('https://TODO-set-site-url.example/');
     expect(list.join(' ')).not.toContain('AUTHOR_NAME');
     expect(list.join(' ')).not.toContain('PORTFOLIO_URL');
     expect(list.join(' ')).toContain('site URL');
   });
 
   it('does not report the site URL once a real one is given', () => {
-    const list = unfilledPlaceholders('https://example.github.io/fingerdash/');
+    const list = unfilledPlaceholders('https://example.com/');
     expect(list.join(' ')).not.toContain('site URL');
   });
 });
